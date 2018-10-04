@@ -1,0 +1,52 @@
+body {
+  background: #000;
+}
+
+.about {
+  margin-top: 25vh;
+}
+
+.about p {
+    font-size: 3vh;
+    float: left;
+    overflow-y: scroll;
+    height: 30vh;
+}
+
+.about h1 {
+  font-size: 8vh;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 40vh;
+}
+
+.vl {
+    border-left: 6px solid #fff;
+    height: 50vh;
+}
+.quote {
+  font-size:15vh;
+  line-height:0.5vh;
+  opacity:0.2;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .about {
+    margin-top: 15vh;
+  }
+  .about p {
+    margin-top: 2vh;
+    font-size: 4vw;
+  }
+  .vl {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }

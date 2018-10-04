@@ -1,0 +1,86 @@
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %}Aavishkar-The Tech Fest, NIT Durgapur{% endblock %}
+
+{% block extra_head %}
+	{# SEO #}
+	<meta name="description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
+	<meta name="keywords" content="Aavishkar, Techfest, hackathon, nit, durgapur, fest, open source, maths, tech">
+
+	<meta property="og:title" content="Aavishkar-The Tech Fest, NIT Durgapur">
+	<meta property="og:url" content="http://avskr.in/">
+	<meta property="og:description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
+	<meta property="og:image" content="http://avskr.in/static/images/avskrLogo.jpg">
+	<meta property="og:type" content="website">
+
+
+	<meta name="twitter:domain" content="avskr.in">
+
+	<meta name="twitter:title" content="Aavishkar-The Tech Fest, NIT Durgapur">
+	<meta name="twitter:url" content="http://avskr.in/">
+	<meta name="twitter:description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
+	<meta name="twitter:image:src" content="http://avskr.in/static/images/avskrLogo.jpg">
+
+
+
+	<meta itemprop="name" content="Aavishkar-The Tech Fest, NIT Durgapur">
+
+	<meta itemprop="url" content="http://avskr.in/">
+	<meta itemprop="description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
+	<meta itemprop="image" content="http://avskr.in/static/images/avskrLogo.jpg">
+	{# END SEO #}
+
+	<link rel="stylesheet" type="text/css" href="{% static "css/homepage.css"%}"/>
+{% endblock %}
+
+{% block extrajs %}
+	<script src="{% static "js/homePage.js"%}"></script>
+{% endblock %}
+
+{% block body_contents %}
+
+<div id="main" style="height: 100%;width: 100%;">
+	{% include "festflow/navBar.html" %}
+	    <!-- MENU -->
+		<div class="menu">
+			<div class="col-md-10 col-md-offset-1 col-sm-12">
+			  <div class="col-md-4 col-sm-4">
+			    <ul class="menu-center">
+			      <li class="left left-right"><a href="/about/" ><img src="{% static "./images2/about_us1.png"%}" style="height:2em;width: auto;"> ABOUT US </a></li>
+			      <li class="left"><a href="/events/groups" ><img src="{% static "./images2/events1.png"%}" style="height:2em;width: auto;"> EVENTS</a></li>
+			      <li class="left"><a href="/events/group/exhibition" ><img src="{% static "./images2/exhibition1.png"%}" style="height:2em;width: auto;"> EXHIBITION</a></li>
+			      <li class="left left-right"><a href="/events/group/talks" ><img src="{% static "./images2/keynote1.png"%}" style="height:2em;width: auto;"> KEYNOTE</a></li>
+			    </ul>
+			  </div>            
+			  <div class="col-md-4 col-sm-4">
+			  	<div style="display:block; text-align: center;height: 100%">
+				    <img src="{% static "./images/Aavishkar Logo Final.png"%}" class="img-responsive big-logo">
+				</div>
+			  </div>
+			  <div class="col-md-4 col-sm-4">
+			    <ul class="menu-center">
+			     	<li class="right right-left"><a href="http://hackathon.nitdgplug.org/">HACKATHON <img src="{% static "./images2/team1.png"%}" style="height:2em;width: auto;"></a></li> 
+			    	<li class="right"><a href="/events/group/workshops/">WORKSHOPS <img src="{% static "./images2/workshop1.png"%}" style="height:2em;width: auto;"></a></li>
+					<li class="right"><a href="/sponsors/">SPONSORS <img src="{% static "./images2/sponsor1.png"%}" style="height:2em;width: auto;"></a></li>
+					<li class="right right-left"><a href="/login/">REGISTER <img src="{% static "./images2/register1.png"%}" style="height:2em;width: auto;"></a></li>
+				</ul>
+			  </div>
+			</div>
+		</div>
+		<div id="space" class="space"></div>
+		<div class="menu_mob">
+			<div class="col-sm-12 menu-center phone">
+				<ul class="menu-center">
+			      <li><a href="/about/">ABOUT US</a></li>
+			      <li><a href="/events/groups">EVENTS</a></li>
+			      <li><a href="/teams/">TEAM</a></li> 
+			      <li><a href="/sponsors/">SPONSORS</a></li>
+				  <li><a href="/events/group/workshops/">WORKSHOPS</a></li>
+				  <li><a href="http://hackathon.nitdgplug.org/">HACKATHON</a></li>
+				  <li><a href="/events/group/exhibition">EXHIBITION</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

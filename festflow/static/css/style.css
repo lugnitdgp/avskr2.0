@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+	/* color: #6d6d6d; */
+	color: #fff;
+	font-family:Monospace;
+	font-size:13px;
+	margin: 0px;
+	overflow: hidden;
+	height: 100vh;
+	font-family: 'Oswald', sans-serif;
+}
+
+#info {
+	position: fixed;
+	top: 0px; width: 100%;
+}
+
+.left-logo {
+	float: left;
+	height: 12vh;
+	display: none;
+}
+
+.right-logo {
+	float: right;
+	height: 12vh;
+	display: none;
+}
+
+.logo-phone {
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: none;
+}
+
+i {
+	border: solid #fff;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	margin-top:189%;
+}
+.left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100vw;
+	height: 20vh;
+	background-image: url('../assets/images/footer.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.header {
+	width: 100vw;
+	height: 20vh;
+	background-image: url('../assets/images/header2.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	font-size: 2.2vh;
+}
+
+.social-icons {
+	right: 2%;
+	position: fixed;
+	bottom: 2%;
+	font-size: 3em;
+}
+.social-icons i {
+	border: none;
+	color: #6d6d6d;
+}
+
+.social-icons i:hover {
+	color: blue;
+}
+
+p {
+	margin: 4%;
+}
+
+.menus a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+/*NAVBAR*/
+#navToggle
+{
+	display: block;
+	position: relative;
+	top: 50px;
+	left: 50px;
+
+	z-index: 1;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#navToggle input
+{
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+
+	cursor: pointer;
+
+	opacity: 0; /* hide this */
+	z-index: 2; /* and place it over the hamburger */
+
+	-webkit-touch-callout: none;
+}
+
+/*
+* Just a quick hamburger
+*/
+#navToggle span
+{
+	display: block;
+	width: 23px;
+	height: 3px;
+	margin-bottom: 5px;
+	position: relative;
+
+	background: #cdcdcd;
+	border-radius: 3px;
+
+	z-index: 1;
+
+	transform-origin: 4px 0px;
+
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				opacity 0.55s ease;
+}
+
+#navToggle span:first-child
+{
+	transform-origin: 0% 0%;
+}
+
+#navToggle span:nth-last-child(2)
+{
+	transform-origin: 0% 100%;
+}
+
+/*
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
+#navToggle input:checked ~ span
+{
+	opacity: 1;
+	transform: rotate(45deg) translate(0px, 2px);
+	background: #fff;
+}
+
+/*
+* But let's hide the middle one.
+*/
+#navToggle input:checked ~ span:nth-last-child(3)
+{
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+* Ohyeah and the last one should go the other direction
+*/
+#navToggle input:checked ~ span:nth-last-child(2)
+{
+	transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+#nav
+{
+	position: absolute;
+	width: 110vw;
+	height: 130vh;
+	margin: -100px 0 0 -50px;
+	padding: 50px;
+	padding-top: 125px;
+	overflow-y: scroll;
+	background: #1d1d1f;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	/* to stop flickering of text in safari */
+
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#nav li
+{
+	padding: 10px 0;
+	font-size: 3.6vh;
+	color: #fff;
+}
+
+.nav_menu:hover {
+	background: #51c5d1;
+	color: #fff !important;
+}
+
+.navigation a {
+	color: #fff;
+}
+
+.navigation a:hover {
+	color: #fff;
+}
+
+.active {
+	background: #51c5d1;
+}
+
+/*
+* And let's slide it in from the left
+*/
+#navToggle input:checked ~ ul
+{
+	transform: none;
+}
+
+@media only screen and (max-width: 800px) {
+	#navToggle {
+	margin-left: 5% !important;
+	margin-top: 6% !important;
+	}
+
+	.navigation {
+	display: none !important;
+	}
+	.navBar {
+	display: block !important;
+	}
+}
+
+
+ @media only screen and (max-width: 800px) {
+	.right-logo {
+		display: block;
+	}
+	.left-logo img {
+		height: 70%;
+	}
+	.social-icons {
+		position: fixed;
+		right: 35%;
+		bottom: 14%;
+		font-size: 3em;
+	}
+	.social-icons i {
+		color: #fff;
+	}
+	.header {
+		width: 100vw;
+		height: 20vh;
+		background-image: url('../assets/images/head.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	.footer {
+		position: fixed;
+		bottom: 0;
+		text-align: center;
+		width: 100vw;
+		height: 20vh;
+		background-image: url('../assets/images/foot.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.logo-phone {
+		display: block;
+	}
+
+	.lappy-menu {
+		display: none;
+	}
+}

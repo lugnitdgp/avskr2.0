@@ -1,0 +1,32 @@
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} Aavishkar 2.0 | The Tech Fest, NIT Durgapur {% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/index.css"%}"/>
+{% endblock %}
+
+{% block body_contents %}
+  <div id="container"></div>
+{% endblock %}
+
+{% block extrajs %}
+  <script src="{% static "vendor/js/three.js" %}"></script>
+  <script src="{% static "vendor/js/controls/OrbitControls.js" %}"></script>
+  <script src="{% static "vendor/js/THREEx.KeyboardState.js" %}"></script>
+  <script src="{% static "vendor/js/objects/Water.js" %}"></script>
+  <script src="{% static "vendor/js/MTLLoader.js" %}"></script>
+  <script src="{% static "vendor/js/OBJLoader.js" %}"></script>
+  <script src="{% static "vendor/js/loaders/AssimpLoader.js" %}"></script>
+  <script src="{% static "vendor/js/Detector.js" %}"></script>
+  <script src="{% static "vendor/js/libs/stats.min.js" %}"></script>
+
+  <script>
+    $( '#switch' ).click(function() {
+      $( "#toggle" ).toggle( "slide", {direction: "right"} );
+    });
+  </script>
+
+  <script src="{% static "js/index.js" %}"></script>
+{% endblock %}

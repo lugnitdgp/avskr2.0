@@ -1,0 +1,72 @@
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} {{ event.name }} {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/event_view.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+{% include "festflow/navBar.html" %}
+<div class="container">
+    <div class="jumbotron" style="border-style: dashed; background: #171334;">
+        <div style="color: #fff">
+           {% if user.is_authenticated %}
+        <!--User is logged in-->
+        <center><h3 id='link'>Congrats! You are registered for Aavishkar</h3></center>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <div class='row'>
+        <div class='col-lg-2'></div>
+        <div class='col-lg-8'>
+        <table class="table ">
+            <tbody>
+                <tr>
+                    <td>You are logged in as :</td>
+                    <td><i>{{ user.username }}</i></td>
+                </tr>
+                <tr>
+                    <td>First Name :</td>
+                    <td><strong> {{ user.first_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Last Name :</td>
+                    <td><strong> {{ user.last_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><strong> {{ user.email }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id='logout' href="/logout" class="btn" role="button">LOGOUT</a>
+        </div>
+        <div class='col-lg-2'></div>
+        </div>
+
+        {% else %}
+        <!--User is not logged in-->
+        <h1 id='link'>Register Now</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <div class="login-btn">
+            <a href="/login/facebook/?next=/login">
+                <img id='fb-login' src='{% static "images/fb-login-btn.png" %}' class='img-responsive' alt='fb login' />
+            </a>
+            <a href="/login/google-oauth2/?next=/login">
+                <img id='google-login' src='{% static "images/google-login-btn.png" %}' class='img-responsive' alt='google login' />
+            </a>
+        </div>
+        {% endif %}
+ 
+        </div>
+    </div>
+</div>
+{% endblock %}

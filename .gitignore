@@ -1,0 +1,8 @@
+*.pyc
+venv
+*.sqlite3
+festcms/media
+settings.py
+wsgi/static/
+.coverage
+.DS_Store

@@ -1,0 +1,40 @@
+#switch {
+	border: 1px;
+	width: 1.5%;
+	text-align: center;
+	float: right;
+	margin-top: 10%;
+	background-color: #fff;
+		background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	height: 12.55vh;
+}
+
+.instruction {
+	border: 1px;
+	width: 20%;
+	float: right;
+	margin-top: 10%;
+		background-color: rgba(0, 0, 0, 0.5);
+	height: 12.55vh;
+}
+.instruction ul{
+	color: #fff;
+	font-size: 2.2vh;
+}
+
+.instruction h6{
+	text-align: center;
+	color: #fff;
+	font-size: 2.8vh;
+	text-decoration: underline;
+}
+
+ @media only screen and (max-width: 800px) {
+	.instruction {
+		display: none;
+	}
+	#switch {
+		display: none;
+	}
+}

@@ -1,0 +1,35 @@
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} FAQ {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>  Frequently Asked Questions </h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        {% if not faqs %}
+        <h3>None added so far, come back here later</h3>
+        {% else %}
+        {% for faq in faqs %}
+        <div style="display: flex;"><span id='ques' class="glyphicon glyphicon-question-sign"></span>
+            <h3  id='link'>{{ faq.question | safe }}</h3>
+        </div>
+        <p>{{ faq.answer | safe }}</p>
+        <hr />
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
