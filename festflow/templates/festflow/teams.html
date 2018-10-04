@@ -31,40 +31,51 @@
   <meta itemprop="image" content="http://avskr.in/static/images/avskrLogo.jpg">
   {# END SEO #}
 
-
-    <link rel="stylesheet" type="text/css" href="{% static "css/team.css"%}"/>
+  <link rel="stylesheet" type="text/css" href="{% static "css/team.css"%}"/>
+	<!-- <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"> -->
 {% endblock %}
 
 {% block extrajs %}
-    <!-- <script src="{% static "js/homePage.js"%}"></script> -->
+
 {% endblock %}
 
 {% block body_contents %}
-
-<div>
-    {% include "festflow/navBar.html" %}
-    <div class="container">
-         <h1>OUR TEAM</h1>
-                {% for member in members %}
-                {% if forloop.counter0|divisibleby:3 %}<div class='row'>{% endif %}
-                <div class="col-md-4 col-sm-6 text-center">
-                  <img class="rounded-circle img-fluid d-block mx-auto team-avatar" src="{% if member.avatar_img %}{{member.avatar_img.url}}{% else %}{% static "images/1-dancing.gif"%}{% endif %}" alt="">
-                  <h3>{{member.name}}<br>
-                    <small>{{member.club}} |</small>
-                    <small>{{member.position}}</small>
-                  </h3>
-                  {% if member.emailId %}
-                  <a href="mailto:{{member.emailId}}" target="_top">{{member.emailId}}</a> |
-                  {% endif %}
-                  {% if member.contactNumber %}
-                  <a href="tel:{{member.contactNumber}}">{{member.contactNumber}}</a>
-                  {% endif %}
-                </div>
-                {% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
-                {% endfor %}
-            <br>
-            <br>
-            <br>
+<div class="cont">
+  {% for member in members %}
+    <div class="card my-card">
+     <div class="card_Banner">
+        <div class="card_Avatar" style="background-image: url(' {{member.avatar_img.url}} ');"></div>
+     </div>
+     <h3>{{member.name}} | {{member.club}}</h3>
+     <h4>{{member.position}}</h4>
+     <a class="mail" href="mailto:cabrown96@live.com">📧 {{member.emailId}}</a>
+     <br>
+     <a class="phone">📱 {{member.contactNumber}}</a>
     </div>
+   {% endfor %}
 </div>
+<!-- <div class="container ">
+     <h1>OUR TEAM</h1>
+            {% for member in members %}
+            {% if forloop.counter0|divisibleby:3 %}<div class='row'>{% endif %}
+            <div class="col-md-4 col-sm-6 text-center membercard">
+              <img class="img-fluid d-block mx-auto team-avatar" src="{% if member.avatar_img %}{{member.avatar_img.url}}{% else %}{% static "images/1-dancing.gif"%}{% endif %}" alt="">
+              <h3>{{member.name}}<br>
+                <small>{{member.club}} |</small>
+                <small>{{member.position}}</small>
+              </h3>
+              {% if member.emailId %}
+              <a href="mailto:{{member.emailId}}" target="_top">{{member.emailId}}</a> |
+              {% endif %}
+              {% if member.contactNumber %}
+              <a href="tel:{{member.contactNumber}}">{{member.contactNumber}}</a>
+              {% endif %}
+            </div>
+            {% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
+            {% endfor %}
+        <br>
+        <br>
+        <br>
+</div> -->
+
 {% endblock %}

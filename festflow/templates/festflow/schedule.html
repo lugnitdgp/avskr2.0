@@ -1,0 +1,228 @@
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} Aavishkar 2.0 | Schedule {% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/schedule.css" %}">
+{% endblock %}
+
+{% block body_contents %}
+<div class="timeline-parcours">
+       <div class="container-info">
+          <div class="timeline-section-tl">
+             <div class="parcours-box parc1">
+                <div class="infobox date1">
+                   <h3>DAY 0</h3>
+
+                </div>
+                <div class="fleche-bloc"></div>
+             </div>
+          </div>
+          <div class="timeline-section-tl">
+             <div class="parcours-box parc2">
+                <div class="infobox date2">
+                   <h3>Day 1</h3>
+
+                </div>
+                <div class="fleche-bloc"></div>
+             </div>
+          </div>
+          <div class="timeline-section-tl">
+             <div class="parcours-box parc3">
+                <div class="infobox date3">
+                   <h3>Day 2</h3>
+
+                </div>
+                <div class="fleche-bloc"></div>
+             </div>
+          </div>
+          <div class="timeline-section-tl">
+             <div class="parcours-box parc4">
+                <div class="infobox date4">
+                   <h3>Day 3</h3>
+
+             </div>
+          </div>
+       </div>
+
+       <div class="container-time-line">
+          <div class="time-line-parcours">
+             <div class="timeline-indicator">
+                <p class="indicator-val"></p>
+             </div>
+          </div>
+       </div>
+       <div class="container-bulle">
+          <div class="timeline-section-tl">
+             <div class="tl-round round1"></div>
+          </div>
+          <div class="timeline-section-tl">
+             <div class="tl-round round2"></div>
+          </div>
+          <div class="timeline-section-tl">
+             <div class="tl-round round3"></div>
+          </div>
+          <div class="timeline-section-tl">
+             <div class="tl-round round4"></div>
+          </div>
+       </div>
+
+    </div>
+  </div>
+
+<div class="container">
+
+  <div class="table-responsive" id="c1" style="background-color:rgba(230,230,230,0.7);">
+<table class="table">
+<thead>
+<tr>
+
+  <th>6PM</th>
+  <th>Terrorist Takedown </th>
+  <th>Main Arena</th>
+
+</tr>
+</thead>
+<tbody>
+   <tr>
+
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Age</th>
+
+</tr>
+   <tr>
+
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Age</th>
+
+</tr>
+   <tr>
+
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Age</th>
+
+</tr>
+   <tr>
+
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Age</th>
+
+</tr>
+   <tr>
+
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Age</th>
+
+</tr>
+   <tr>
+
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Age</th>
+
+</tr>
+   <tr>
+
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Age</th>
+
+</tr>
+
+
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div class="container">
+
+<div class="table-responsive" id="c2" style="background-color:white;">
+<table class="table">
+<thead>
+<tr>
+
+<th>6BM</th>
+<th>Terrorist Takedown </th>
+<th>Main Arena</th>
+
+</tr>
+<tbody>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Age</th>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="container">
+
+<div class="table-responsive" id="c3" style="background-color:white;">
+<table class="table">
+<thead>
+<tr>
+
+<th>6CM</th>
+<th>Terrorist Takedown </th>
+<th>Main Arena</th>
+
+</tr>
+<tbody>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Age</th>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="container">
+
+<div class="table-responsive" id="c4" style="background-color:white;">
+<table class="table">
+<thead>
+<tr>
+
+<th>6DM</th>
+<th>Terrorist Takedown </th>
+<th>Main Arena</th>
+
+</tr>
+<tbody>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Age</th>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+  <script type="text/javascript" src="{% static "js/schedule.js" %}"></script>
+  <script>
+   function reste_a_faire()
+   {
+      return true;
+   }
+   if(reste_a_faire())
+      console.log('rien n\'est fait');
+  </script>
+{% endblock %}

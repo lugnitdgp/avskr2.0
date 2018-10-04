@@ -40,12 +40,17 @@ def teams(request):
     context['members'] = all_members
     return render(request, 'festflow/teams.html', context)
 
+def webteams(request):
+    # context = {}
+    # all_members = organizerMember.objects.all().order_by('rank')
+    # context['members'] = all_members
+    return render(request, 'festflow/webteam.html')
+
 
 def about(request):
     context = {}
     context['content'] = About.objects.last()
     return render(request, 'festflow/about.html', context)
-
 
 def events(request):
     context = {}
@@ -53,6 +58,29 @@ def events(request):
     context['all_events'] = all_events
     return render(request, 'festflow/event.html', context)
 
+def ignitia(request):
+    # context = {}
+    # all_events = Event.objects.all()
+    # context['all_events'] = all_events
+    return render(request, 'festflow/ignitia.html')
+
+def attractions(request):
+    # context = {}
+    # all_events = Event.objects.all()
+    # context['all_events'] = all_events
+    return render(request, 'festflow/attractions.html')
+
+def workshop(request):
+    # context = {}
+    # all_events = Event.objects.all()
+    # context['all_events'] = all_events
+    return render(request, 'festflow/workshop.html')
+
+def timeline(request):
+    # context = {}
+    # all_events = Event.objects.all()
+    # context['all_events'] = all_events
+    return render(request, 'festflow/schedule.html')
 
 def event_group_list(request):
     context = {}

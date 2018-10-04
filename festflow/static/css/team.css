@@ -1,0 +1,194 @@
+/* .container {
+  margin-top: 20vh;
+} */
+
+/* .membercard {
+  background: #fff;
+} */
+/* body{
+  background-color: black;
+  padding:3%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+body {
+  background: #000;
+  overflow-y: scroll;
+}
+.one{
+    display: block;
+    float:left;
+    background-color: black;
+    height:99vh;
+    width:23vw;
+    border: 1px solid white;
+}
+
+.cont{
+    margin-left: 10vh;
+    margin-top:15vh;
+    color: #fff;
+}
+
+.card{
+    max-height:299px;
+    display: block;
+    float:left;
+    height: 99vh;
+    width:22vw;
+    /* ⬅ Size - Small (width: 200px), Medium (width: 225px), Large (width: 250px) */
+    overflow: hidden;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+    .card:last-of-type{
+        margin-right: 0px;
+        margin-bottom:5%;
+    }
+
+    .card:hover{
+        transform: scale(1.05);
+        background-color: transparent;
+        box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+   }
+   .card:hover h4{
+        color: #fff;
+   }
+   .card:hover h3{
+        color: #fff;
+   }
+
+   .card:hover a{
+     color: #fff !important;
+   }
+   .card:hover .card_Avatar{
+        border: 1px solid transparent;
+   }
+
+.card_Banner{
+    height: 100px;
+    width: inherit;
+    padding-top: 35px;
+    background-color: #FAFAFA;
+    background-size: cover;
+    background-position: center;
+}
+
+    .card_Banner{
+        /* ⬇ Photo by Alexandru Acea on Unsplash */
+        background-image: url("https://images.unsplash.com/photo-1537192830907-c60714675834?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9f8ea79c488a95e95d35c10fad79b0d&auto=format&fit=crop&w=934&q=80");
+    }
+
+.card_Avatar{
+    height: 100px;
+    width: 100px;
+    margin: auto auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border: 3px solid #FFFFFF;
+    border-radius: 100%;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+    .card_Avatar{
+        /* background-image: url("fb.jpg"); */
+    }
+a{
+  text-decoration: none;
+  color:#000;
+}
+h3, h4, i{
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+    h3{
+        margin-top: 45px;
+        margin-bottom: 5px;
+        font-size: 25px;
+        color: #212121;
+    }
+
+    h4{
+        font-size:20px;
+        margin-bottom: 10px;
+        color: #000;
+        line-height: 30px;
+    }
+
+   /* .class .mail{
+        display: block;
+        padding: 5px 0px;
+        font-size: 14px;
+        color: #9E9E9E;
+        text-decoration: none;
+    } */
+    .phone {
+      color: #000 !important;
+    }
+    .mail{
+        margin-top: 40px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .phone {
+      line-height: 0px;
+      font-size: 16px;
+    }
+    .mail:hover{
+        transform:scale(1.01);
+        background-color: #2A2A2A;
+        color: white;
+        text-decoration:none;
+    }
+
+
+*::selection{
+    background-color: #CCFF90;
+}
+
+@media screen and (max-width: 930px) {
+    .card{
+        width:29vw;
+    }
+    .cont{
+      margin-top:16vh;
+      margin-left: 2vw;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    .card{
+        width:43vw;
+
+    }
+    .cont{
+      margin-top:16vh;
+      margin-left: 2vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card{
+        width:85vw;
+          margin-left:4vw;
+    }
+    .cont{
+      margin-top:16vh;
+      margin-left: 2vw;
+    }
+}

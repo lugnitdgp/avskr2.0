@@ -1,0 +1,150 @@
+/* body {
+   font-family:sans-serif;
+   margin:0;
+   padding:0;
+   width:100%;
+
+   background-size:cover;
+   background-image:url('wood.png');
+   text-decoration-color: white;
+   overflow-x: hidden;
+
+} */
+/* html {
+   width:100%;
+} */
+
+/* ****** */
+
+.timeline-parcours {
+
+   width:960px;
+   height:auto;
+   min-height:100px;
+   margin:100px auto;
+}
+.container-info  {
+   width:960px;
+   margin:0 auto;
+   height:auto;
+   padding-top: 5vh;
+
+}
+.timeline-section-tl {
+   width:236px;
+   height:auto;
+   min-height:10px;
+   display:inline-block;
+}
+.infobox {
+   width:226px;
+   height:auto;
+   min-height:10px;
+   background-color:white;
+   padding:5px;
+   border-radius:10px;
+   display:inline-block;
+   margin:0px 1px;
+}
+
+.parcours-box {
+   opacity:0;
+   z-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+.container-time-line {
+   width:960px;
+   margin:auto;
+
+}
+.time-line-parcours {
+   width:730px;
+   height:10px;
+   background-color:white;
+   margin:auto;
+}
+.timeline-indicator {
+   width:0px;
+   height:1vh;
+   background-color:rgba(0,0,250,0.8);
+   -webkit-transition: all 100ms ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+.tl-round {
+   width:2vh;
+   height:2vh;
+   border-radius:50%;
+   background-color:blue;
+   margin:auto;
+    -webkit-transition: all 100ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+.container-bulle {
+   margin-top:-15px;
+}
+/* animation classe */
+
+.anim-phase-1 {
+   width:240px;
+   -webkit-transition: all 100ms ease;
+-moz-transition: all 100ms ease;
+-ms-transition: all 100ms ease;
+-o-transition: all 100ms ease;
+transition: all 100ms ease;
+}
+.anim-phase-2 {
+   width:475px;
+   -webkit-transition: all 100ms ease;
+-moz-transition: all 100ms ease;
+-ms-transition: all 100ms ease;
+-o-transition: all 100ms ease;
+transition: all 100ms ease;
+}
+.anim-phase-3 {
+   width:720px;
+   -webkit-transition: all 100ms ease;
+-moz-transition: all 100ms ease;
+-ms-transition: all 100ms ease;
+-o-transition: all 100ms ease;
+transition: all 100ms ease;
+}
+.parcours-active {
+   opacity:1;
+   z-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+
+.table th {
+  border:0px!important;
+  font-size:2vh;
+}
+
+
+
+
+tr hover::after{
+  transform: scale(1.2);
+}
+@media screen only and (max-width:600px){
+  .table th{
+    font-size: 3vh;
+  }
+  .tl-round{
+    margin-top:0;
+    height:3vh;
+    width:3vh;
+  }
+
+}

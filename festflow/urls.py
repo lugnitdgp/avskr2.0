@@ -12,6 +12,9 @@ urlpatterns = [
     # Team Page
     url(r'^teams/$', views.teams, name='teams'),
 
+    # Web Team Page
+    url(r'^webteam/$', views.webteams, name='webteams'),
+
     # About Page
     url(r'^about/$', views.about, name='about'),
 
@@ -23,6 +26,18 @@ urlpatterns = [
 
     # Event Page
     url(r'^events/$', views.events, name='events'),
+
+    # Ignitia Page
+    url(r'^ignitia/$', views.ignitia, name='ignitia'),
+
+    # Attractions Page
+    url(r'^attractions/$', views.attractions, name='attractions'),
+
+    # Workshop Page
+    url(r'^workshop/$', views.workshop, name='workshop'),
+
+    # Schedule Page
+    url(r'^schedule/$', views.timeline, name='timeline'),
 
     # Event Groups List Page
     url(r'^events/groups$', views.event_group_list, name='event_group_list'),

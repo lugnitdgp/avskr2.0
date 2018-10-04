@@ -1,40 +1,109 @@
 {% extends "festflow/base.html" %}
 {% load static %}
 
-{% block title %} Aavishkar - Events {% endblock %}
+{% block title %} Aavishkar 2.0 | Events {% endblock %}
 
 {% block extra_head %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/event.css"%}"/>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css"> -->
+{% endblock %}
 
-<!-- View CSS -->
-<link rel="stylesheet" type="text/css" href="{% static "css/event.css"%}"/>
-
+{% block extrajs %}
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+  <script src="{% static "js/event.js" %}"></script>
 {% endblock %}
 
 {% block body_contents %}
-{% include "festflow/navBar.html" %}
-<div class="container">
-    <div class="jumbotron">
-        <h1 id='link'>Events</h1>
-        <div class="dash"></div>
-        <br />
-        <br />
-        <br />
-        <div class='row'>
-            {% for event in all_events %}
-            <div class='col-lg-4'>
-                <a href="{{ event.get_absolute_url }}">
-                    {% if event.logo %}
-                    <img src="{{ event.logo.url }}" width='100%' alt= "{{ event.name }}" class='img-responsive' />
-                    {% endif %}
-                    <div class='event-text'>
-                        <div class="subdash"></div>
-                        <p>{{ event.name }}</p>
-                    </div>
-                </a>
-            </div>
-            {% endfor %}
-        </div>
+
+  <div class="bg">
+    <div class="option-bar">
+        <div class="option">category 1</div>
+        <div class="option">category 2</div>
+        <div class="option">category 3</div>
+        <div class="option">category 4</div>
     </div>
-</div>
+    <div class="event-category">
+        <div class="events tiles-grid">
+          <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
+            <div class="slide"><img src="images/codegeass.jpg"></div>
+            <div class="slide"><img src="images/Midnight-lights.jpg"></div>
+            <span class="branding-bar">Stats</span>
+          </div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+        </div>
+        <div class="events tiles-grid">
+           <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
+              <div class="slide"><img src="images/codegeass.jpg"></div>
+              <div class="slide"><img src="images/Midnight-lights.jpg"></div>
+              <span class="branding-bar">Stats</span>
+          </div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+        </div>
+        <div class="events tiles-grid">
+           <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
+              <div class="slide"><img src="images/codegeass.jpg"></div>
+              <div class="slide"><img src="images/Midnight-lights.jpg"></div>
+              <span class="branding-bar">Stats</span>
+          </div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+        </div>
+        <div class="events tiles-grid">
+           <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
+              <div class="slide"><img src="images/codegeass.jpg"></div>
+              <div class="slide"><img src="images/Midnight-lights.jpg"></div>
+              <span class="branding-bar">Something tidbits about events</span>
+          </div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+          <div class="event" data-role="tile" data-size="medium" data-tilt><span class="branding-bar">Event</span></div>
+        </div>
+      </div>
+  </div>
+  <div class="event-description">
+      <img src="images/cross.png" class="cross">
+      <div class="event-poster">
+          <img class="poster" src="images/test-poster.webp">
+      </div>
+      <div class="event-info">
+          <div class="event-name">Event Name</div>
+          <div class="description">A zoo (short for zoological garden or zoological park and also called an animal park or menagerie) is a facility in which all animals are housed within enclosures, displayed to the public, and in which they may also breed.
+              The term "zoological garden" refers to zoology, the study of animals, a term deriving from the Greek zōon (ζῷον, 'animal') and lógos (λóγος, 'study'). The abbreviation "zoo" was first used of the London Zoological Gardens, which was opened for scientific study in 1828 and to the public in 1857</div>
+          <div class="info">
+              <img src="images/venue.png" class="info-icon">
+              <span>Event Venue</span>
+              <img src="images/time.png" class="info-icon">
+              <span>Event Time</span>
+          </div>
+      </div>
+  </div>
 
 {% endblock %}
