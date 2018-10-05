@@ -41,7 +41,7 @@
     top: 0%;
     height: 1px;
     width: 1px;
-    background-color: rgba(122, 42, 226, 0.4);
+    background: rgba(0, 0, 0, 0.8);
     opacity: 0;
     transition: all .3s ease-in-out;
     color: whitesmoke;
@@ -61,6 +61,7 @@
 
 .talker-info {
     padding: 9%;
+    font-size: 2vh;
 }
 
 .talk-info {
@@ -72,6 +73,9 @@
     padding-bottom: 2%;
 }
 
+.talker h2 {
+  font-size: 6vh;
+}
 @media screen and  (max-width: 1094px) {
     .event {
         width: 80%;
@@ -82,12 +86,27 @@
         overflow:scroll;
         overflow-x: hidden;
     } */
+    .footer {
+  		display: none;
+  	}
 
 }
 @media screen and  (max-width: 1000px) {
-.talks{
-  height:70%;
-  overflow:scroll;
-
-    }
+  body {
+    overflow-y: scroll;
+  }
+  .talker-info {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  .talks{
+    height:70%;
+    /* overflow:scroll; */
+  }
+  .footer {
+		display: none;
+	}
+  .event {
+    height: 60vh;
+  }
 }

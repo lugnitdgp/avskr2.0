@@ -9,50 +9,20 @@
 
 {% block body_contents %}
   <div class="talks">
-    <div class="event">
-        <img  src="{% static "assets/images/codegeass.jpg" %}" class="photo">
-        <div class="info">
-                <div class="talker"><h2>Talker name</h2></div>
-                <div class="talker-info">
-                        Because Sun Xiang truly was strong. He had sunken to the Challenger League for the season and ended up losing that to Happy, but the champion team Samsara still wanted him, showing a deep-rooted recognition of his skill. Two seasons of failure hadn't affected people's evaluation of him.
-                </div>
-                <div class="talk-info">
-                        <img src="{% static "assets/images/venue.png" %}" class="info-icon">
-                        <span>Event Venue</span>
-                        <img src="{% static "assets/images/time.png" %}" class="info-icon">
-                        <span>Event Time</span>
-                </div>
-        </div>
-    </div>
-    <div class="event">
-        <img  src="{% static "assets/images/codegeass.jpg" %}" class="photo">
-        <div class="info">
-                <div class="talker"><h2>Talker name</h2></div>
-                <div class="talker-info">
-                        Because Sun Xiang truly was strong. He had sunken to the Challenger League for the season and ended up losing that to Happy, but the champion team Samsara still wanted him, showing a deep-rooted recognition of his skill. Two seasons of failure hadn't affected people's evaluation of him.
-                </div>
-                <div class="talk-info">
-                        <img src="{% static "assets/images/venue.png" %}" class="info-icon">
-                        <span>Event Venue</span>
-                        <img src="{% static "assets/images/time.png" %}" class="info-icon">
-                        <span>Event Time</span>
-                </div>
-        </div>
-    </div>
-    <div class="event">
-        <img  src="{% static "assets/images/codegeass.jpg" %}" class="photo">
-        <div class="info">
-                <div class="talker"><h2>Talker name</h2></div>
-                <div class="talker-info">
-                        Because Sun Xiang truly was strong. He had sunken to the Challenger League for the season and ended up losing that to Happy, but the champion team Samsara still wanted him, showing a deep-rooted recognition of his skill. Two seasons of failure hadn't affected people's evaluation of him.
-                </div>
-                <div class="talk-info">
-                        <img src="{% static "assets/images/venue.png" %}" class="info-icon">
-                        <span>Event Venue</span>
-                        <img src="{% static "assets/images/time.png" %}" class="info-icon">
-                        <span>Event Time</span>
-                </div>
-        </div>
-    </div>
+    {% for ignitia in all_ignitia %}
+      <div class="event">
+          <img  src="{{ ignitia.logo.url }}" class="photo">
+          <div class="info">
+            <div class="talker"><h2>{{ ignitia.name }}</h2></div>
+            <div class="talker-info">{{ ignitia.description|safe }}</div>
+            <div class="talk-info">
+              <img src="{% static "assets/images/venue.png" %}" class="info-icon">
+              <span>{{ ignitia.venue }}</span>
+              <img src="{% static "assets/images/time.png" %}" class="info-icon">
+              <span>{{ ignitia.date_time }}</span>
+            </div>
+          </div>
+      </div>
+    {% endfor %}
   </div>
 {% endblock %}

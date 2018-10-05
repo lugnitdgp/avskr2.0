@@ -168,6 +168,9 @@ h3, h4, i{
       margin-top:16vh;
       margin-left: 2vw;
     }
+    .footer {
+  		display: none;
+  	}
 }
 
 @media screen and (max-width: 660px) {
@@ -180,6 +183,9 @@ h3, h4, i{
       margin-top:16vh;
       margin-left: 2vw;
     }
+    .footer {
+  		display: none;
+  	}
 }
 
 @media screen and (max-width: 450px) {
@@ -191,4 +197,7 @@ h3, h4, i{
       margin-top:16vh;
       margin-left: 2vw;
     }
+    .footer {
+  		display: none;
+  	}
 }

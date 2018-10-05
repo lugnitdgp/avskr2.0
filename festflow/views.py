@@ -16,23 +16,9 @@ def index(request):
     context = {}
     profiles_count = Profile.objects.count()
     all_events = Event.objects.all()
-
     context['profiles_count'] = profiles_count
     context['all_events'] = all_events
-
     return render(request, 'festflow/index.html', context)
-
-
-def home(request):
-    context = {}
-    profiles_count = Profile.objects.count()
-    all_events = Event.objects.all()
-
-    context['profiles_count'] = profiles_count
-    context['all_events'] = all_events
-
-    return render(request, 'festflow/homePage.html', context)
-
 
 def teams(request):
     context = {}
@@ -56,30 +42,32 @@ def events(request):
     context = {}
     all_events = Event.objects.all()
     context['all_events'] = all_events
+    all_groups = EventGroup.objects.all()
+    context['all_groups'] = all_groups
     return render(request, 'festflow/event.html', context)
 
 def ignitia(request):
-    # context = {}
-    # all_events = Event.objects.all()
-    # context['all_events'] = all_events
-    return render(request, 'festflow/ignitia.html')
+    context = {}
+    group = EventGroup.objects.get(group_identifier='ignitia')
+    all_ignitia = Event.objects.filter(group=group)
+    context['all_ignitia'] = all_ignitia
+    return render(request, 'festflow/ignitia.html', context)
 
 def attractions(request):
-    # context = {}
-    # all_events = Event.objects.all()
-    # context['all_events'] = all_events
+    context = {}
+    group = EventGroup.objects.get(group_identifier='attractions')
+    all_attractions = Event.objects.filter(group=group)
+    context['all_attractions'] = all_attractions
     return render(request, 'festflow/attractions.html')
 
 def workshop(request):
-    # context = {}
-    # all_events = Event.objects.all()
-    # context['all_events'] = all_events
-    return render(request, 'festflow/workshop.html')
+    context = {}
+    group = EventGroup.objects.get(group_identifier='workshop')
+    all_workshops = Event.objects.filter(group=group)
+    context['all_workshops'] = all_workshops
+    return render(request, 'festflow/workshop.html', context)
 
 def timeline(request):
-    # context = {}
-    # all_events = Event.objects.all()
-    # context['all_events'] = all_events
     return render(request, 'festflow/schedule.html')
 
 def event_group_list(request):

@@ -6,8 +6,8 @@ urlpatterns = [
     # Index Page
     url(r'^$', views.index, name='index'),
 
-    # Home Page
-    url(r'^home/$', views.home, name='home'),
+    # # Home Page
+    # url(r'^home/$', views.home, name='home'),
 
     # Team Page
     url(r'^teams/$', views.teams, name='teams'),
@@ -21,8 +21,8 @@ urlpatterns = [
     # Sponsors Page
     url(r'^sponsors/$', views.sponsors, name='sponsors'),
 
-    # Contact Page
-    url(r'^contact/$', views.contact, name='contact'),
+    # # Contact Page
+    # url(r'^contact/$', views.contact, name='contact'),
 
     # Event Page
     url(r'^events/$', views.events, name='events'),
@@ -39,15 +39,15 @@ urlpatterns = [
     # Schedule Page
     url(r'^schedule/$', views.timeline, name='timeline'),
 
-    # Event Groups List Page
-    url(r'^events/groups$', views.event_group_list, name='event_group_list'),
+    # # Event Groups List Page
+    # url(r'^events/groups$', views.event_group_list, name='event_group_list'),
 
-    # Event Group Page
-    url(r'^events/group/(?P<group_identifier>[a-z]*)/$',
-        views.event_group, name='event_group'),
+    # # Event Group Page
+    # url(r'^events/group/(?P<group_identifier>[a-z]*)/$',
+    #     views.event_group, name='event_group'),
 
-    # Keynotes Page
-    url(r'^keynotes/$', views.keynotes, name='keynotes'),
+    # # Keynotes Page
+    # url(r'^keynotes/$', views.keynotes, name='keynotes'),
 
     # Reach Us Page
     url(r'^reachus/$', views.reachus, name='reachus'),

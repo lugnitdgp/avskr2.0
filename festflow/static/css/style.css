@@ -8,7 +8,7 @@ body {
 	margin: 0px;
 	overflow: hidden;
 	height: 100vh;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Oswald', sans-serif !important;
 }
 
 #info {
@@ -60,11 +60,12 @@ i {
 
 .header {
 	width: 100vw;
-	height: 20vh;
+	height: 21vh !important;
 	background-image: url('../assets/images/header2.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	font-size: 2.2vh;
+	font-size: 2.2vh !important;
+	color: #fff !important;
 }
 
 .social-icons {
@@ -291,10 +292,6 @@ p {
 	}
 
 	.lappy-menu {
-		display: none;
-	}
-
-	.footer {
-		display: none;
+		display: none !important;
 	}
 }
