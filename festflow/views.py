@@ -11,7 +11,6 @@ from .utils import *
 
 # Create your views here.
 
-
 def index(request):
     context = {}
     profiles_count = Profile.objects.count()
@@ -32,7 +31,6 @@ def webteams(request):
     # context['members'] = all_members
     return render(request, 'festflow/webteam.html')
 
-
 def about(request):
     context = {}
     context['content'] = About.objects.last()
@@ -48,50 +46,36 @@ def events(request):
 
 def ignitia(request):
     context = {}
-    group = EventGroup.objects.get(group_identifier='ignitia')
-    all_ignitia = Event.objects.filter(group=group)
-    context['all_ignitia'] = all_ignitia
+    try:
+        group = EventGroup.objects.get(group_identifier='ignitia')
+        all_ignitia = Event.objects.filter(group=group)
+        context['all_ignitia'] = all_ignitia
+    except ObjectDoesNotExist:
+        raise Http404
     return render(request, 'festflow/ignitia.html', context)
 
 def attractions(request):
     context = {}
-    group = EventGroup.objects.get(group_identifier='attractions')
-    all_attractions = Event.objects.filter(group=group)
-    context['all_attractions'] = all_attractions
-    return render(request, 'festflow/attractions.html')
+    try:
+        group = EventGroup.objects.get(group_identifier='attractions')
+        all_attractions = Event.objects.filter(group=group)
+        context['all_attractions'] = all_attractions
+    except ObjectDoesNotExist:
+        raise Http404
+    return render(request, 'festflow/attractions.html', context)
 
 def workshop(request):
     context = {}
-    group = EventGroup.objects.get(group_identifier='workshop')
-    all_workshops = Event.objects.filter(group=group)
-    context['all_workshops'] = all_workshops
+    try:
+        group = EventGroup.objects.get(group_identifier='workshop')
+        all_workshops = Event.objects.filter(group=group)
+        context['all_workshops'] = all_workshops
+    except ObjectDoesNotExist:
+        raise Http404
     return render(request, 'festflow/workshop.html', context)
 
 def timeline(request):
     return render(request, 'festflow/schedule.html')
-
-def event_group_list(request):
-    context = {}
-    all_groups = EventGroup.objects.all()
-    context['all_groups'] = all_groups
-    return render(request, 'festflow/event_group_list.html', context)
-
-
-def event_group(request, group_identifier):
-    context = {}
-    group = EventGroup.objects.get(group_identifier=group_identifier)
-    group_events = Event.objects.filter(group=group)
-    print(list(group_events))
-    context['group_events'] = group_events
-    return render(request, 'festflow/event_group.html', context)
-
-
-def keynotes(request):
-    context = {}
-    all_events = Keynote.objects.all()
-    context['all_keynotes'] = all_events
-    return render(request, 'festflow/keynote.html', context)
-
 
 def sponsors(request):
     context = {}
@@ -104,32 +88,27 @@ def sponsors(request):
     context['sponsors'] = sponsors
     return render(request, 'festflow/spons.html', context)
 
-
-def contact(request):
-    context = {}
-    all_contacts = organizerMember.objects.all()
-    context['all_contacts'] = all_contacts
-    return render(request, 'festflow/contact.html', context)
-
+# def contact(request):
+#     context = {}
+#     all_contacts = organizerMember.objects.all()
+#     context['all_contacts'] = all_contacts
+#     return render(request, 'festflow/contact.html', context)
 
 def reachus(request):
     context = {}
     context["google_api_key"] = settings.GOOGLE_API_KEY
     return render(request, 'festflow/reachus.html', context)
 
-
 def faq(request):
     context = {}
     context['faqs'] = FAQ.objects.all()
     return render(request, 'festflow/faq.html', context)
-
 
 def login_page(request):
     context = {}
     profiles_count = Profile.objects.count()
     context['profiles_count'] = profiles_count
     return render(request, 'festflow/login_page.html', context)
-
 
 def event_view(request, event_identifier):
     context = {}
@@ -145,23 +124,6 @@ def event_view(request, event_identifier):
     context['event'] = event
 
     return render(request, 'festflow/event_view.html', context)
-
-
-def keynote_view(request, keynote_identifier):
-    context = {}
-    try:
-        keynote = Keynote.objects.get(identifier=keynote_identifier)
-    except ObjectDoesNotExist:
-        raise Http404
-
-    if request.user.is_authenticated:
-        user_profile = Profile.objects.get(user=request.user)
-        context['user_profile'] = user_profile
-
-    context['keynote'] = keynote
-
-    return render(request, 'festflow/keynote_view.html', context)
-
 
 @login_required
 def register_event(request, event_identifier):
