@@ -33,6 +33,9 @@ urlpatterns = [
     # Schedule Page
     url(r'^schedule/$', views.timeline, name='timeline'),
 
+    # Gallery Page
+    url(r'^gallery/$', views.gallery, name='gallery'),
+
     # Reach Us Page
     url(r'^reachus/$', views.reachus, name='reachus'),
 
@@ -59,7 +62,7 @@ urlpatterns = [
     # Form to complete profile
     url(r'^complete_profile/$',
         views.complete_profile, name='complete_profile'),
-        
+
     # logout url
     url(r'^logout/$',
         logout, {'next_page': '/home'})
