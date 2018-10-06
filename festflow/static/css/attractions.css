@@ -1,16 +1,3 @@
-/* body{
-  background-color:black;
-  overflow-y:hidden;
-  background: url('../images/wood.png');
-  background-repeat: no-repeat;
-  background-size:auto;
-  background-position: center;
-
-  padding: 0;
-  height:97vh;
-  width:98%;
-  margin-left:1vh;
-} */
 
 .event_poster{
   height:100%;
@@ -18,54 +5,75 @@
 }
 .work{
   position:absolute;
-  top:7%;
-  left:3%;
-  width:18%;
-  height:90%;
+  top:10%;
+  left:0%;
+  width:100%;
+  height:80%;
   /* border:1px solid white;*/
 }
 
 .work-1{
   position:absolute;
-  top:2%;
-  left:15%;
-  width:70%;
-  height:18%;
-  /* border:1px solid white;*/
+  top:5%;
+  left:7.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
 }
 .work-2{
   position:absolute;
-  top:27%;
-  left:15%;
-  width:70%;
-  height:18%;
-  /* border:1px solid white;*/
+  top:5%;
+  left:37.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
 }
 .work-3{
   position:absolute;
-  top:52%;
-  left:15%;
-  width:70%;
-  height:18%;
-  /* border:1px solid white; */
+  top:5%;
+  left:68.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
 }
 .work-4{
   position:absolute;
-  top:77%;
-  left:15%;
-  width:70%;
-  height:18%;
-/*  border:1px solid white; */
+  top:50%;
+  left:7.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
+}
+.work-5{
+  position:absolute;
+  top:50%;
+  left:37.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
+}
+.work-6{
+  position:absolute;
+  top:50%;
+  left:68.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
 }
 
 
-
 .event-description {
-     position: fixed;
+     position: absolute;
      top: 15vh;
-     left: 30vw;
+     left: 10vw;
      height: 65vh;
-     width: 67vw;
+     width: 80vw;
      opacity: 1;
     transition: all .2s ease-in-out;
      background-color: rgba(32, 80, 92, 0.6);
@@ -73,10 +81,9 @@
 
 
  }
-
  .event-poster {
      position: absolute;
-     height: 80%;0
+     height: 80%;
      margin-top: 5%;
      margin-bottom: 20%;
      width: 35%;
@@ -98,18 +105,18 @@
      top: 10%;
      margin-left: 10%;
      width: 80%;
-     border-bottom: 1px solid white;
-     text-align: center;
+     /* border-bottom: 1px solid white;
+     text-align: center; */
      color: whitesmoke;
+     font-size: 8vh;
  }
 
  .description {
      position: absolute;
      top: 20%;
      left: 0%;
-
-    width:85%;
-     text-align: center;
+     width:85%;
+    font-size: 2.2vh;
      color: whitesmoke;
      padding: 9%;
  }
@@ -131,7 +138,8 @@
      position: absolute;
      top: 1%;
      right: 1%;
-     z-index: 4;
+     z-index: 2;
+     cursor: pointer;
  }
 
  .poster {
@@ -161,55 +169,71 @@
     width:98%;
     display:block;
     margin:0px;
-    overflow-y: hidden;
+
   }
   .work{
     height:100%;
     width:100%;
+    overflow-y: hidden;
+    left:1vh;
   }
   .work-1{
     position:absolute;
     top:5%;
     left:1%;
     width:45%;
-    height:35%;
-    border:1px solid white;
-  }
-  .work-2{
-    position:absolute;
-    top:50%;
-    left:1%;
-    width:45%;
-    height:35%;
+    height:20%;
     border:1px solid white;
   }
   .work-3{
     position:absolute;
+    top:32%;
+    left:1%;
+    width:45%;
+    height:20%;
+    border:1px solid white;
+  }
+  .work-2{
+    position:absolute;
     top:5%;
     left:49%;
     width:45%;
-    height:35%;
+    height:20%;
     border:1px solid white;
   }
   .work-4{
     position:absolute;
-    top:50%;
+    top:32%;
     left:49%;
     width:45%;
-    height:35%;
+    height:20%;
+    border:1px solid white;
+  }
+  .work-5{
+    position:absolute;
+    top:58%;
+    left:1%;
+    width:45%;
+    height:20%;
+    border:1px solid white;
+  }
+  .work-6{
+    position:absolute;
+    top:58%;
+    left:49%;
+    width:45%;
+    height:20%;
     border:1px solid white;
   }
 
-
-
   .event-description {
       overflow-y: scroll;
-
+      overflow-x: hidden;
       position:absolute;
-      top:7%;
+      top:15vh;
       left:4%;
       width:92%;
-      height:88%;
+      height:82vh;
   }
 
   .event-poster {
@@ -228,7 +252,7 @@
       width: 100%;
       height: 10%;
       margin-left: 1%;
-      padding-bottom: 3%;
+      padding-bottom: 5vh;
       top:5%;
       border-bottom: 1px solid white;
       text-align: center;

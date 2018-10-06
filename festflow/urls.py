@@ -59,7 +59,7 @@ urlpatterns = [
     # Form to complete profile
     url(r'^complete_profile/$',
         views.complete_profile, name='complete_profile'),
-
+        
     # logout url
     url(r'^logout/$',
         logout, {'next_page': '/home'})

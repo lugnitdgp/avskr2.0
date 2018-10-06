@@ -196,7 +196,7 @@ p {
 	margin: -100px 0 0 -50px;
 	padding: 50px;
 	padding-top: 125px;
-	overflow-y: scroll;
+	overflow-y: scroll !important;
 	background: #1d1d1f;
 	list-style-type: none;
 	-webkit-font-smoothing: antialiased;
