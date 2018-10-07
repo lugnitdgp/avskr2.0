@@ -113,6 +113,15 @@ class Keynote(models.Model):
     def get_absolute_url(self):
         return '/keynote/%s/' % self.identifier
 
+class Gallery(models.Model):
+    "Stores Images of Previous Edition of Fest"
+
+    # gallery id
+    identifier = models.CharField(max_length=50, unique=True,
+                                  validators=[lowercaseAlphabet])
+    # gallery image
+    image = models.ImageField(upload_to='gallery_images/',
+                              blank=False, null=True)
 
 class Profile(models.Model):
     "Stores additional information about the user"

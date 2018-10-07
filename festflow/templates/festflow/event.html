@@ -39,7 +39,8 @@
                                                   data-logo="{{ event.logo.url }}"
                                                   data-desc="{{ event.description|safe }}"
                                                   data-venue="{{ event.venue }}"
-                                                  data-time="{{ event.date_time }}">
+                                                  data-time="{{ event.date_time }}"
+                                                  data-url="{{ event.get_absolute_url }}">
                                                   <span class="branding-bar">{{ event.name }}</span>
               </div>
             {% endif %}
@@ -55,7 +56,9 @@
       </div>
       <div class="event-info">
           <div class="event-name"></div>
-          <div class="description"></div>
+          <div class="description">
+          </div>
+          <a href="" class="link_url"><button class="expand">Expand</button></a>
           <div class="info">
               <img src="{% static "assets/images/venue.png" %}" class="info-icon">
               <span class="event_venue">Event Venue</span>

@@ -150,6 +150,17 @@ body {
     padding: 10%;
 }
 
+.expand {
+    position: absolute;
+    top: 55vh;
+    left: 5vw;
+    font-size: 2.6vh;
+    color: whitesmoke;
+    margin: 10%;
+    background-color: #555555;
+    cursor: pointer;
+}
+
 .info {
     position: absolute;
     bottom: 0%;
@@ -250,4 +261,21 @@ body {
         margin: 0;
         margin-left: 10%;
     }
+
+    .expand {
+        position: absolute !important;
+        top: 55vh;
+        left: 5vw;
+        font-size: 2.6vh !important;
+        color: whitesmoke !important;
+        margin: 10% !important;
+        background-color: #555555 !important;
+        cursor: pointer !important;
+    }
+}
+
+@media screen and ( max-width: 600px) {
+  .expand {
+    top: 70vh;
+  }
 }

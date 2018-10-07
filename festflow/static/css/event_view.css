@@ -1,0 +1,54 @@
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background: #000;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+  overflow-y: scroll !important;
+}
+
+.container {
+  margin-top: 15vh;
+}
+
+h1 {
+	text-align: left;
+  font-size: 8vh;
+}
+h3 {
+  margin-top: 5vh;
+  font-size: 4vh;
+}
+.desc {
+  font-size: 2.5vh;
+}
+
+.footer {
+  display: none;
+}
+
+.img-fluid {
+    margin: auto;
+    width: 60%;
+    border: 3px solid grey;
+    padding: 10px;
+}
+
+.sub-heading p{
+  font-size: 2vh;
+}
+
+.btn {
+  margin-left: 1vw;
+}
+@media only screen and (max-width: 600px) {
+    h1 {
+    	font-size: 2.4em;
+    }
+    .img-fluid {
+      width: 100%;
+    }
+}
