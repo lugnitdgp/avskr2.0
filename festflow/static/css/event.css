@@ -11,6 +11,11 @@
     overflow-y: auto;
 }
 
+
+.nxt {
+    display: none;
+}
+
 .option-bar {
     margin-top: 10vh;
     height: 4vh;
@@ -272,6 +277,28 @@ body {
         background-color: #555555 !important;
         cursor: pointer !important;
     }
+    
+     @keyframes blinking {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0.7;
+        }
+    }
+
+    .nxt {
+        display: inline-block;
+        position: fixed;
+        right: 10px;
+        bottom: 47%;
+        height: 40px;
+        width: 30px;
+        animation-duration: .8s;
+        animation-name: blinking;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }   
 }
 
 @media screen and ( max-width: 600px) {
