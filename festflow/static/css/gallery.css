@@ -63,3 +63,9 @@ body{
 	border: none;
 
 }
+
+@media screen and  (max-width: 800px) {
+  .footer {
+		display: none;
+	}
+}
