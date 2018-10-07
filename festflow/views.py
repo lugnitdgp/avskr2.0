@@ -77,6 +77,9 @@ def workshop(request):
 def timeline(request):
     return render(request, 'festflow/schedule.html')
 
+def gallery(request):
+    return render(request, 'festflow/gallery.html')
+
 def sponsors(request):
     context = {}
     all_groups = SponsorGroup.objects.all()
