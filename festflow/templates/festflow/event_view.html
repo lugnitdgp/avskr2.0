@@ -44,45 +44,45 @@
 <link rel="stylesheet" type="text/css" href='{% static "css/event_view.css" %}'/>
 {# RSSB #}
 <link rel="stylesheet" href="{% static "vendor/css/rrssb.css"%}" />
-<script src="{% static "vendor/js/rrssb.min.js"%}"></script>
-
 {% endblock %}
 
 {% block body_contents %}
-{% include "festflow/navBar.html" %}
 <div class="container">
-    <div class="jumbotron" style="border-style: dashed; background: #171334;">
+    <div class="jumbotron" style="background: #10100a">
         <div style="color: #fff">
-            <h1 id='link' style="text-align: left;">{{ event.name }}</h1>
+            <h1 id='link'>{{ event.name }}</h1>
             <div class="dash"></div>
             <br />
             <br />
             {% if event.logo %}
-            <img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-responsive' />
-            <br />
+              <img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-fluid' />
+              <br />
             {% endif %}
 
             <h3 id='link'><strong>About the Event</strong></h3>
             <div class="subdash"></div>
             <br />
             <br />
-            <p>{{ event.description|safe }}</p>
+            <p class="desc">{{ event.description|safe }}</p>
 
-            <div class='sub-heading'>
-                <p><strong>Venue : </strong></p>
-                <p>
-                  {% if event.group|slugify == "online" %}
-                    <a target="_blank" href="{{ event.venue }}">{{ event.venue }}</a>
-                  {% endif %}
-                  {% if event.group|slugify != "online" %}
-                    {{ event.venue }}
-                  {% endif %}
-                </p>
-            </div>
-
-            <div class='sub-heading'>
-                <p><strong>Time : </strong></p>
-                <p> {{ event.date_time }}</p>
+            <div class="row">
+                <div class="col-md-6">
+                  <div class='sub-heading'>
+                      <p><strong>Venue :
+                        {% if event.group|slugify == "online" %}
+                          <a target="_blank" href="{{ event.venue }}">{{ event.venue }}</a>
+                        {% endif %}
+                        {% if event.group|slugify != "online" %}
+                          {{ event.venue }}
+                        {% endif %}
+                      </strong></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class='sub-heading' style="float: right">
+                      <p><strong>Time: {{ event.date_time }}</strong></p>
+                  </div>
+                </div>
             </div>
 
             {% if event.problem_statement_file %}
@@ -90,9 +90,9 @@
             {% endif %}
 
             {% if event in user_profile.registered_events.all %}
-            <h3>You have already registered for this event !!!</h3>
+            <h5 style="margin-left: 1vw;">You have already registered for this event !!!</h5>
             {% else %}
-            <a id='register' href="/register_event/{{ event.identifier }}" class="btn" role="button">REGISTER</a>
+            <a id='register' href="/register_event/{{ event.identifier }}" class="btn btn-dark" role="button">REGISTER</a>
             {% endif %}
 
             <!-- Buttons start here. Copy this ul to your document. -->
@@ -130,4 +130,8 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extrajs %}
+  <script src="{% static "vendor/js/rrssb.min.js"%}"></script>
 {% endblock %}

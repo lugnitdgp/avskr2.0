@@ -3,6 +3,7 @@ var logo;
 var desc;
 var venue;
 var time;
+var url;
 
 $(document).ready(function(){
   $('.option-bar').flickity({
@@ -36,11 +37,13 @@ $('.event').click(function(){
   desc=jQuery(this).attr('data-desc');
   venue=jQuery(this).attr('data-venue');
   time=jQuery(this).attr('data-time');
+  url=jQuery(this).attr('data-url');
   $(".poster").attr("src", logo);
   $(".event-name").text(name);
   $(".description").text(desc);
   $(".event_venue").text(venue);
   $(".event_time").text(time);
+  $("a").attr("href", url);
 
   $('.event-description').css({'opacity': 1, 'z-index': 3});
   $('.bg').css({'opacity': 0});

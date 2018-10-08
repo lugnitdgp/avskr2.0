@@ -157,15 +157,9 @@
   	crossorigin="anonymous">
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script><audio id="beep" preload="auto">
-	<source src="beep.mp3" type="audio/mp3"></source>
-  <source src="beep.ogg" type="audio/ogg"/>
-</audio>
-  <audio id="beep" preload="auto">
-	<source src='{% static "assets/audio/beep.mp3" %}'type="audio/mp3"></source>
-  <source src='{% static "assets/audio/beep.ogg" %}' type="audio/ogg"/>
-</audio>
+
   {% block extrajs %}
-    <script type="text/javascript" src="{% static "js/base.js" %}></script>
+
     {% endblock %}
 </body>
 </html>
