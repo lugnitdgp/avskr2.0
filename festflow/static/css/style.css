@@ -238,7 +238,8 @@ p {
 	transform: none;
 }
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 1100px) {
 	#navToggle {
 	margin-left: 5% !important;
 	margin-top: 6% !important;
@@ -253,7 +254,7 @@ p {
 }
 
 
- @media only screen and (max-width: 800px) {
+ @media only screen and (max-width: 1100px) {
 	.right-logo {
 		display: block;
 	}
@@ -261,9 +262,11 @@ p {
 		height: 70%;
 	}
 	.social-icons {
-		position: fixed;
-		right: 35%;
-		bottom: 14%;
+		position: absolute;
+		left:30%;
+		right: 30%;
+		width: 40%;
+		bottom: 60%;
 		font-size: 3em;
 	}
 	.social-icons i {
