@@ -1,5 +1,7 @@
+
 body {
   background: #000;
+  overflow: hidden!important;
 }
 
 .about {

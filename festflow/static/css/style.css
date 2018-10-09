@@ -90,8 +90,12 @@ p {
 .menus a {
   text-decoration: none !important;
   color: #fff !important;
-}
 
+}
+.menus a:hover{
+	text-decoration: underline!important;
+	text-decoration-color: silver;
+}
 /*NAVBAR*/
 #navToggle
 {
@@ -204,6 +208,7 @@ p {
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
 	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
 }
 
 #nav li
