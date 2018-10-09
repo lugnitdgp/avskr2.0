@@ -78,7 +78,10 @@ def timeline(request):
     return render(request, 'festflow/schedule.html')
 
 def gallery(request):
-    return render(request, 'festflow/gallery.html')
+    context = {}
+    gallery_images = Gallery.objects.all()
+    context['all_gallery'] = gallery_images
+    return render(request, 'festflow/gallery.html', context)
 
 def sponsors(request):
     context = {}
