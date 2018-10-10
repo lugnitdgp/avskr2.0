@@ -90,8 +90,17 @@ p {
 .menus a {
   text-decoration: none !important;
   color: #fff !important;
+
 }
 
+.menus a:hover{
+	border: 1px groove solid;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	transform: translateZ(10px);
+
+
+}
 /*NAVBAR*/
 #navToggle
 {
@@ -204,6 +213,7 @@ p {
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
 	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
 }
 
 #nav li
@@ -238,7 +248,8 @@ p {
 	transform: none;
 }
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 1100px) {
 	#navToggle {
 	margin-left: 5% !important;
 	margin-top: 6% !important;
@@ -253,7 +264,7 @@ p {
 }
 
 
- @media only screen and (max-width: 800px) {
+ @media only screen and (max-width: 1100px) {
 	.right-logo {
 		display: block;
 	}
@@ -261,13 +272,16 @@ p {
 		height: 70%;
 	}
 	.social-icons {
-		position: fixed;
-		right: 35%;
-		bottom: 14%;
+		position: absolute;
+		left:30%;
+		right: 30%;
+		width: 40%;
+		bottom: 60%;
 		font-size: 3em;
 	}
 	.social-icons i {
 		color: #fff;
+		margin-top: 0px!important;
 	}
 	.header {
 		width: 100vw;

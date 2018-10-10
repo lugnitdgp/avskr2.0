@@ -1,9 +1,12 @@
+
 body {
   background: #000;
 }
 
 .about {
   margin-top: 25vh;
+  margin-right: 0;
+  width: 100vw;
 }
 
 .about p {
@@ -11,6 +14,7 @@ body {
     float: left;
     overflow-y: scroll;
     height: 30vh;
+    margin-right: -5% !important;
 }
 
 .about h1 {
@@ -52,3 +56,8 @@ body {
   .logo {
     display: none;
   }
+
+  .about p {
+      height: 40vh;
+  }
+}

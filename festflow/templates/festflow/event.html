@@ -21,31 +21,39 @@
   <div class="bg">
     <div class="option-bar">
       {% for group in all_groups %}
-        <div class="option">{{ group.group_name }}</div>
+        {% if group.group_name|slugify != "workshop" and group.group_name|slugify != "attractions" and group.group_name|slugify != "ignitia" %}
+          <div class="option">{{ group.group_name }}</div>
+        {% endif %}
       {% endfor %}
     </div>
     <div class="event-category">
       {% for singlegroup in all_groups %}
-        <div class="events tiles-grid">
-          <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
-            <div class="slide"><img src="{% static "assets/images/codegeass.jpg" %}"></div>
-            <div class="slide"><img src="{{singlegroup.logo.url}}"></div>
-            <span class="branding-bar">{{ singlegroup.group_name }}</span>
+        {% if singlegroup.group_name|slugify != "workshop" and singlegroup.group_name|slugify != "attractions" and singlegroup.group_name|slugify != "ignitia" %}
+          <div class="events tiles-grid">
+            <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
+              {% if singlegroup.logo %}
+                <div class="slide"><img src="{{singlegroup.logo.url}}" class="img-fluid" style="height: 100%"></div>
+              {% endif %}
+              {% if singlegroup.logo2 %}
+                <div class="slide"><img src="{{singlegroup.logo2.url}}" class="img-fluid" style="height: 100%"></div>
+              {% endif %}
+              <span class="branding-bar">{{ singlegroup.group_name }}</span>
+            </div>
+            {% for event in all_events %}
+              {% if event.group|slugify == singlegroup|slugify %}
+                <div class="event" data-role="tile" data-size="medium" data-tilt
+                                                    data-name="{{ event.name }}"
+                                                    data-logo="{{ event.logo.url }}"
+                                                    data-desc="{{ event.description|safe }}"
+                                                    data-venue="{{ event.venue }}"
+                                                    data-time="{{ event.date_time }}"
+                                                    data-url="{{ event.get_absolute_url }}" style=" background-size: cover; {% if event.tiles %} background-image: url('{{ event.tiles.url }}') {% endif %}">
+                                                    <span class="branding-bar" style="font-size: 2vh; text-align: center">{{ event.name }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
-          {% for event in all_events %}
-            {% if event.group|slugify == singlegroup|slugify %}
-              <div class="event" data-role="tile" data-size="medium" data-tilt
-                                                  data-name="{{ event.name }}"
-                                                  data-logo="{{ event.logo.url }}"
-                                                  data-desc="{{ event.description|safe }}"
-                                                  data-venue="{{ event.venue }}"
-                                                  data-time="{{ event.date_time }}"
-                                                  data-url="{{ event.get_absolute_url }}">
-                                                  <span class="branding-bar">{{ event.name }}</span>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -68,5 +76,7 @@
           </div>
       </div>
   </div>
+
+  <img src="{% static "assets/images/messi.png" %}" alt="" class="messi">
 
 {% endblock %}

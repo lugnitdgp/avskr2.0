@@ -1,0 +1,97 @@
+body{
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y: scroll;
+
+
+}
+
+.card{
+
+    max-height:250px;
+    display: block;
+    float:left;
+    height: 70vh;
+    /* ⬅ Size - Small (width: 200px), Medium (width: 225px), Large (width: 250px) */
+    width:100%;
+    overflow: hidden;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 5px;
+    padding: 0px;
+    border: 1px groove white;
+    border-radius: 20px;
+  }
+  .card p{
+    color: silver;
+    font-size: 2vh;
+    text-align: center!important;
+  }
+
+
+.card_Banner{
+
+    padding-top: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.card_Avatar{
+    height: 130px;
+    width: 130px;
+    margin: auto auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border: 3px solid #FFFFFF;
+    border-radius: 20%;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+.card_Banner{
+    /* ⬇ Photo by Alexandru Acea on Unsplash */
+    background-image: url('/static/assets/images/card.jpg');
+}
+.card_Avatar.a
+{
+    background-image: url('/static/assets/images/a.jpg');
+}
+.card_Avatar.b{
+        background-image: url('/static/assets/images/b.jpg');
+    }
+    .card_Avatar.c
+    {
+        background-image: url('/static/assets/images/c.jpg');
+    }
+    .card_Avatar.d
+    {
+        background-image: url('/static/assets/images/d.jpg');
+    }
+    .card_Avatar.e
+    {
+        background-image: url('/static/assets/images/e.jpg');
+    }
+    .card_Avatar.f
+    {
+        background-image: url('/static/assets/images/f.jpg');
+    }
+    .card_Avatar.g
+    {
+        background-image: url('/static/assets/images/g.jpg');
+    }
+
+
+
+.heading p{
+  margin-left: 5%;
+  margin-top: 0px;
+  margin-bottom: 5%;
+  font-size: 3vh;
+  font-family: inherit;
+
+}
