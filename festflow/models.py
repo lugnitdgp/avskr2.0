@@ -35,6 +35,10 @@ class EventGroup(models.Model):
     logo = models.ImageField(upload_to='event_group_images/',
                              blank=True, null=True)
 
+    # event logo2
+    logo2 = models.ImageField(upload_to='event_images/',
+                             blank=True, null=True)
+
     def __str__(self):
         return self.group_identifier
 
@@ -57,6 +61,10 @@ class Event(models.Model):
 
     # event logo
     logo = models.ImageField(upload_to='event_images/',
+                             blank=True, null=True)
+
+    # event tiles
+    tiles = models.ImageField(upload_to='event_images/',
                              blank=True, null=True)
 
     # event problem statement file

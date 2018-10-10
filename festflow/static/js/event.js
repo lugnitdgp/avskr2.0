@@ -43,7 +43,7 @@ $('.event').click(function(){
   $(".description").text(desc);
   $(".event_venue").text(venue);
   $(".event_time").text(time);
-  $("a").attr("href", url);
+  $(".event-info a").attr("href", url);
 
   $('.event-description').css({'opacity': 1, 'z-index': 3});
   $('.bg').css({'opacity': 0});
