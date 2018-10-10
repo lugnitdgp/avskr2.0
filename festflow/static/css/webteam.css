@@ -21,12 +21,14 @@ body{
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 15px;
-    background-color: #FFF;
+    background-color: rgba(0,0,0,0.5);
     font-size: 5px;
     padding: 0px;
+    border: 1px groove white;
+    border-radius: 20px;
   }
   .card p{
-    color: black;
+    color: silver;
     font-size: 2vh;
     text-align: center!important;
   }
@@ -53,39 +55,37 @@ body{
 }
 .card_Banner{
     /* ⬇ Photo by Alexandru Acea on Unsplash */
-    background-image: url("http://tuua.tntsj.com/images/2440-1.jpg");
+    background-image: url('/static/assets/images/card.jpg');
 }
 .card_Avatar.a
 {
-    background-image: url('/static/assets/images/24hr.png');
+    background-image: url('/static/assets/images/a.jpg');
 }
 .card_Avatar.b{
-        background-image: url('/static/assets/images/24hr.png');
+        background-image: url('/static/assets/images/b.jpg');
     }
     .card_Avatar.c
     {
-        background-image: url('/static/assets/images/24hr.png');
+        background-image: url('/static/assets/images/c.jpg');
     }
     .card_Avatar.d
     {
-        background-image: url('/static/assets/images/24hr.png');
+        background-image: url('/static/assets/images/d.jpg');
     }
-    .card_Avatar.a
+    .card_Avatar.e
     {
-        background-image: url('/static/assets/images/24hr.png');
+        background-image: url('/static/assets/images/e.jpg');
     }
-    .card_Avatar.a
+    .card_Avatar.f
     {
-        background-image: url('/static/assets/images/24hr.png');
+        background-image: url('/static/assets/images/f.jpg');
     }
-    .card_Avatar.a
+    .card_Avatar.g
     {
-        background-image: url('/static/assets/images/24hr.png');
+        background-image: url('/static/assets/images/g.jpg');
     }
-    .card_Avatar.a
-    {
-        background-image: url('/static/assets/images/24hr.png');
-    }
+
+
 
 .heading p{
   margin-left: 5%;
