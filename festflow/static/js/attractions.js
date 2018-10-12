@@ -15,10 +15,10 @@ $('.event-description').css({'opacity': 0 ,'z-index':-1});
       venue=jQuery(this).attr('data-venue');
       time=jQuery(this).attr('data-time');
       $(".poster").attr("src", logo);
-      $(".event-name").text(name);
-      $(".description").text(desc);
-      $(".event_venue").text(venue);
-      $(".event_time").text(time);
+      $(".event-name").html(name);
+      $(".description").html(desc);
+      $(".event_venue").html(venue);
+      $(".event_time").html(time);
     $('.work').css({'opacity': 0 ,'z-index':-1})
   });
 
@@ -32,10 +32,10 @@ $('.event-description').css({'opacity': 0 ,'z-index':-1});
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
     $('.work').css({'opacity': 0 ,'z-index':-1})
   });
 
@@ -49,10 +49,10 @@ $('.event-description').css({'opacity': 0 ,'z-index':-1});
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
     $('.work').css({'opacity': 0 ,'z-index':-1})
   });
 
@@ -65,10 +65,10 @@ $('.event-description').css({'opacity': 0 ,'z-index':-1});
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
     $('.work').css({'opacity': 0 ,'z-index':-1})
   });
   $('.work-5').click(function(){
@@ -80,10 +80,10 @@ $('.event-description').css({'opacity': 0 ,'z-index':-1});
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
     $('.work').css({'opacity': 0 ,'z-index':-1})
   });
 
@@ -95,10 +95,10 @@ $('.event-description').css({'opacity': 0 ,'z-index':-1});
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
     $('.work').css({'opacity': 0 ,'z-index':-1})
   });
 
