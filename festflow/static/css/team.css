@@ -86,7 +86,9 @@ body {
 
     .card_Banner{
         /* ⬇ Photo by Alexandru Acea on Unsplash */
-        background-image: url("https://images.unsplash.com/photo-1537192830907-c60714675834?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9f8ea79c488a95e95d35c10fad79b0d&auto=format&fit=crop&w=934&q=80");
+        background: url('/static/assets/images/team_card_bg.jpg');
+        background-size: cover;
+        background-position: center;
     }
 
 .card_Avatar{

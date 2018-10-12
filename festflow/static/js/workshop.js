@@ -12,10 +12,10 @@ $(document).ready(function() {
   venue=$('.work-1').data('venue');
   time=$('.work-1').data('time');
   $(".poster").attr("src", logo);
-  $(".event-name").text(name);
-  $(".description").text(desc);
-  $(".event_venue").text(venue);
-  $(".event_time").text(time);
+  $(".event-name").html(name);
+  $(".description").html(desc);
+  $(".event_venue").html(venue);
+  $(".event_time").html(time);
 });
 
 if($(window).width() < 600){
@@ -28,10 +28,10 @@ if($(window).width() < 600){
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
 
     $('.event-description').css({'opacity': 1 , 'z-index':5});
     if($(window).width() < 600)
@@ -47,10 +47,10 @@ if($(window).width() < 600){
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
 
     $('.event-description').css({'opacity': 1, 'z-index':5 });
     if($(window).width() < 600)
@@ -66,10 +66,10 @@ if($(window).width() < 600){
     venue=jQuery(this).attr('data-venue');
     time=jQuery(this).attr('data-time');
     $(".poster").attr("src", logo);
-    $(".event-name").text(name);
-    $(".description").text(desc);
-    $(".event_venue").text(venue);
-    $(".event_time").text(time);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
 
     $('.event-description').css({'opacity': 1, 'z-index':5 });
     if($(window).width() < 600)

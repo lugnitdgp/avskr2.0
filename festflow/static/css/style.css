@@ -65,7 +65,7 @@ i {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	font-size: 2.2vh !important;
-	color: #fff !important;
+	color: #fff;
 }
 
 .social-icons {
@@ -89,15 +89,17 @@ p {
 
 .menus a {
   text-decoration: none !important;
-  color: #fff !important;
+  color: #fff;
 
 }
 
 .menus a:hover{
 	border: 1px groove solid;
 	padding: 5px;
-	background-color: rgba(0,0,0,0.5);
+	background: #fff !important;
 	transform: translateZ(10px);
+	color: #000 !important;
+	border-radius: 0px;
 
 
 }
@@ -237,7 +239,11 @@ p {
 }
 
 .active {
-	background: #51c5d1;
+	/* border: 1px groove solid; */
+	/* padding: 5px; */
+	/* background: #fff !important; */
+	/* text-decoration: underline;
+	border-radius: 0px; */
 }
 
 /*
