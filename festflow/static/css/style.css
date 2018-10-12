@@ -89,15 +89,17 @@ p {
 
 .menus a {
   text-decoration: none !important;
-  color: #fff !important;
+  color: #fff;
 
 }
 
 .menus a:hover{
 	border: 1px groove solid;
 	padding: 5px;
-	background-color: rgba(0,0,0,0.5);
+	background: #fff !important;
 	transform: translateZ(10px);
+	color: #000 !important;
+	border-radius: 0px;
 
 
 }
