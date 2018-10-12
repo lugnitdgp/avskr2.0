@@ -1,7 +1,7 @@
 {% extends "festflow/base.html" %}
 {% load static %}
 
-{% block title %} Aavishkar 2018 - Team {% endblock %}
+{% block title %} Aavishkar 2.0 | Team {% endblock %}
 
 {% block extra_head %}
   {# SEO #}
@@ -46,7 +46,7 @@
      <div class="card_Banner">
         <div class="card_Avatar" style="background-image: url(' {{member.avatar_img.url}} ');"></div>
      </div>
-     <h3>{{member.name}} | {{member.club}}</h3>
+     <h3>{{member.name}}</h3>
      <h4>{{member.position}}</h4>
      <a class="mail" href="mailto:cabrown96@live.com">📧 {{member.emailId}}</a>
      <br>

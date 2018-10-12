@@ -56,24 +56,24 @@
         <div class="col-md-4 offset-md-6 event_lappy">
           <div class="row">
             <div class="col-md-3">
-              <p class="menus" id="menu"><a href="/">Home</a></p>
-              <p class="menus" id="menu"><a href="/about/">About Us</a></p>
-              <p class="menus" id="menu"><a href="/gallery/">Gallery</a></p>
+              <p class="menus {% if request.path == "/" %}active{% endif %}" id="menu"><a href="/">Home</a></p>
+              <p class="menus {% if "/about/" in request.path %}active{% endif %}" id="menu"><a href="/about/">About Us</a></p>
+              <p class="menus {% if "/gallery/" in request.path %}active{% endif %}" id="menu"><a href="/gallery/">Gallery</a></p>
             </div>
             <div class="col-md-3">
-              <p class="menus" id="menu"><a href="/events/">Events</a></p>
-              <p class="menus" id="menu"><a href="/schedule/">Schedule</a></p>
-              <p class="menus" id="menu"><a href="/workshop/">Workshops</a></p>
+              <p class="menus {% if "/events/" in request.path %}active{% endif %}" id="menu"><a href="/events/">Events</a></p>
+              <p class="menus {% if "/schedule/" in request.path %}active{% endif %}" id="menu"><a href="/schedule/">Schedule</a></p>
+              <p class="menus {% if "/workshop/" in request.path %}active{% endif %}" id="menu"><a href="/workshop/">Workshops</a></p>
             </div>
             <div class="col-md-3">
-              <p class="menus" id="menu"><a href="/attractions/">Attractions</a></p>
-              <p class="menus" id="menu"><a href="/ignitia/">Ignitia</a></p>
+              <p class="menus {% if "/attractions/" in request.path %}active{% endif %}" id="menu"><a href="/attractions/">Attractions</a></p>
+              <p class="menus {% if "/ignitia/" in request.path %}active{% endif %}" id="menu"><a href="/ignitia/">Ignitia</a></p>
               <p class="menus" id="menu"><a href="http://sciencex.avskr.in">ScienceX</a></p>
             </div>
             <div class="col-md-3">
-              <p class="menus" id="menu"><a href="/teams/">Team</a></p>
-              <p class="menus" id="menu"><a href="/webteam/">Web Credits</a></p>
-              <p class="menus" id="menu"><a href="/sponsors/">Sponsors</a></p>
+              <p class="menus {% if "/teams/" in request.path %}active{% endif %}" id="menu"><a href="/teams/">Team</a></p>
+              <p class="menus {% if "/webteam/" in request.path %}active{% endif %}" id="menu"><a href="/webteam/">Web Credits</a></p>
+              <p class="menus {% if "/sponsors/" in request.path %}active{% endif %}" id="menu"><a href="/sponsors/">Sponsors</a></p>
             </div>
           </div>
         </div>
