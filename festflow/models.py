@@ -81,6 +81,9 @@ class Event(models.Model):
     # event date and time
     date_time = models.DateTimeField()
 
+    # contact
+    contact = models.CharField(max_length=255, blank=True, null=True)
+
     # group
     group = models.ForeignKey('EventGroup', on_delete=models.SET_NULL,
                               null=True, blank=True)

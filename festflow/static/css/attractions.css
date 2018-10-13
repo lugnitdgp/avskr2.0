@@ -4,9 +4,22 @@ body{
   background-color: black;
 }
 .event_poster{
-  height:100%;
-  width:100%;
+  height:80%;
+  width:95%;
+  margin-left: 2%;
+  margin-top: 2%;
 }
+
+.work_bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.att_name {
+    text-align: center;
+    font-size: 2.5vh;
+    margin-top: 1vh;
+}
+
 .work{
   position:absolute;
   top:10%;
