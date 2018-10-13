@@ -6,8 +6,8 @@ body{
 .event_poster{
   height:80%;
   width:95%;
-  margin-left: 2%;
-  margin-top: 2%;
+  margin-left: 0.5vw;
+  margin-top: 1vh;
 }
 
 .work_bg {
@@ -189,10 +189,10 @@ body{
 
   }
   .work{
-    height:100%;
-    width:100%;
+    height:97vh;
+    width:95vw;
     overflow-y: hidden;
-    left:1vh;
+    left:4vw;
   }
   .work-1{
     position:absolute;
@@ -321,4 +321,14 @@ body{
   .footer {
 		display: none;
 	}
+
+  .event_poster {
+      margin-left: 1vw;
+  }
+  .att_name {
+    margin-top: 0vh;
+  }
+  .work_bg {
+    height: 22vh;
+  }
 }
