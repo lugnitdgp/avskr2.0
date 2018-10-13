@@ -1,12 +1,9 @@
 body{
+  background-image: url('/static/assets/images/bg.gif');
+background-repeat: no-repeat;
+background-attachment: fixed;
   background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   overflow-y: scroll;
-
-
 }
 
 .card{
@@ -28,7 +25,7 @@ body{
     border-radius: 20px;
   }
   .card p{
-    color: silver;
+    color: ;
     font-size: 2vh;
     text-align: center!important;
   }
@@ -55,7 +52,7 @@ body{
 }
 .card_Banner{
     /* ⬇ Photo by Alexandru Acea on Unsplash */
-    background-image: url('/static/assets/images/card.jpg');
+    background-color: black;
 }
 .card_Avatar.a
 {
@@ -93,5 +90,9 @@ body{
   margin-bottom: 5%;
   font-size: 3vh;
   font-family: inherit;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-shadow: 2px 2px 2px black;
 
 }

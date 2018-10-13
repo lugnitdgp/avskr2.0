@@ -1,3 +1,9 @@
+body{
+  background-image: url('/static/assets/images/bg.gif');
+  background-color: black;
+	 background-attachment: fixed;
+	overflow-y: hidden;
+}
 .events {
     width: 90%;
     height: 70vh;
@@ -12,11 +18,7 @@
     overflow-y: auto;
 }
 
-.messi {
-  margin-left: 70vw !important;
-  margin-top: 40vh !important;
-  filter: drop-shadow(3px 1px 4px grey) !important;
-}
+
 
 .nxt {
     display: none;
@@ -71,17 +73,19 @@
     font-size: 2.5vh;
     height: inherit;
     width: 10vw;
-    color: #000;
+    color: white;
     text-align: center;
     /* transition: opacity 1s ease-in-out; */
+    background-color: rgba(0,0,0,0.9);
     vertical-align: middle;
 }
 
 .option.is-selected {
     /* background-color: rgb(219, 206, 206, 0.4); */
     /* text-decoration: underline; */
-    border-bottom: 5px solid #8B0000;
-    background: #fff;
+    border: 2px solid black;
+    color: black;
+    background:rgba(1,1,1,0.1);
 }
 
 .events.is-selected {
@@ -99,13 +103,6 @@
     margin-top: 2%;
 }
 
-body {
-    background-image: url('/static/assets/images/event_bg2.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    background-size: cover;
-}
 
 .background {
     z-index: -1;
@@ -214,7 +211,15 @@ body {
     height: 20px;
     margin-left: 12%;
 }
-
+.event.tile-large{
+  background-color: rgba(0,0,0,0.4);
+}
+.event.tile-medium{
+  background-color: rgba(0,0,0,0.4);
+}
+.footer{
+  display: none;
+}
 @media screen and ( max-width: 976px) {
     .event-description {
       overflow-y: scroll;
@@ -328,7 +333,16 @@ body {
   .option {
     width: 90vw;
   }
-  .messi {
-    display: none;
+  .bg {
+      position: fixed;
+      top: 0;
+      width: auto;
+      height: 85vh;
+      margin-left: 5%;
+      margin-top: 2%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
   }
+
 }

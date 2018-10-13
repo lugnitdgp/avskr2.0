@@ -1,6 +1,6 @@
 body{
   background-image: url('/static/assets/images/bg.gif');
-    background-size: 100% 100%;
+background-attachment: fixed;
   background-color: black;
   overflow-y: scroll;
 }
@@ -30,7 +30,7 @@ body{
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 15px;
-    background-color: #FFFFFF;
+    background-color:rgba(200,200,200,0.7);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     text-align: center;
@@ -45,7 +45,7 @@ body{
 
     .card:hover{
         transform: scale(1.05);
-        background-color: transparent;
+        background-color: rgba(0,0,40,0.8);
         box-shadow: 0 15px 20px rgba(0,0,0,0.1);
    }
    .card:hover h4{
@@ -66,14 +66,14 @@ body{
     height: 100px;
     width: inherit;
     padding-top: 35px;
-    background-color: #FAFAFA;
+    background-color:rgba(30,30,30,0.5);
     background-size: cover;
     background-position: center;
 }
 
     .card_Banner{
         /* ⬇ Photo by Alexandru Acea on Unsplash */
-        background: url('/static/assets/images/team_card_bg.jpg');
+        background-color:rgba(0,20,40,0.8);
         background-size: cover;
         background-position: center;
     }
