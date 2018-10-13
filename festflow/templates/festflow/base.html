@@ -46,19 +46,6 @@
 <body>
   {% block body_contents %}{% endblock %}
 
-<div class="loader"></div>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<svg width="50vh"  height="50vh"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-pacman" style="background: transparent;"><g ng-attr-style="display:{{config.showBean}}" style="display:block"><circle cx="87.9099" cy="50" r="4" ng-attr-fill="{{config.c2}}" fill="#5bc0de"><animate attributeName="cx" calcMode="linear" values="95;35" keyTimes="0;1" dur="1" begin="-0.67s" repeatCount="indefinite"></animate><animate attributeName="fill-opacity" calcMode="linear" values="0;1;1" keyTimes="0;0.2;1" dur="1" begin="-0.67s" repeatCount="indefinite"></animate></circle><circle cx="48.3099" cy="50" r="4" ng-attr-fill="{{config.c2}}" fill="#5bc0de"><animate attributeName="cx" calcMode="linear" values="95;35" keyTimes="0;1" dur="1" begin="-0.33s" repeatCount="indefinite"></animate><animate attributeName="fill-opacity" calcMode="linear" values="0;1;1" keyTimes="0;0.2;1" dur="1" begin="-0.33s" repeatCount="indefinite"></animate></circle><circle cx="68.1099" cy="50" r="4" ng-attr-fill="{{config.c2}}" fill="#5bc0de"><animate attributeName="cx" calcMode="linear" values="95;35" keyTimes="0;1" dur="1" begin="0s" repeatCount="indefinite"></animate><animate attributeName="fill-opacity" calcMode="linear" values="0;1;1" keyTimes="0;0.2;1" dur="1" begin="0s" repeatCount="indefinite"></animate></circle></g><g ng-attr-transform="translate({{config.showBeanOffset}} 0)" transform="translate(-15 0)"><path d="M50 50L20 50A30 30 0 0 0 80 50Z" ng-attr-fill="{{config.c1}}" fill="#337ab7" transform="rotate(40.3351 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;45 50 50;0 50 50" keyTimes="0;0.5;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform></path><path d="M50 50L20 50A30 30 0 0 1 80 50Z" ng-attr-fill="{{config.c1}}" fill="#337ab7" transform="rotate(-40.3351 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;-45 50 50;0 50 50" keyTimes="0;0.5;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform></path></g></svg>
-<style>
-.lds-pacman{
-	height:100%;
-    width:100%;
-    margin-top: 0%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    }
-  </style>
   <audio id="mySoundClip">
   	<source src="{% static "assets/audio/beep.mp3" %}"></source>
   	<source src="{% static "assets/audio/beep.ogg" %}"></source>
@@ -203,13 +190,7 @@
   </script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script>
-$(window).load(function() {
 
-    $(".loader").hide();
-});
-
- </script>
   {% block extrajs %}
 
     {% endblock %}
