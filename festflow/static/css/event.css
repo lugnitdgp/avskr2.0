@@ -1,5 +1,6 @@
 body{
-  background-image: url('/static/assets/images/bg.gif');
+  background-image: url('/static/assets/images/event_bg2.jpg');
+  background-size: cover;
   background-color: black;
 	 background-attachment: fixed;
 	overflow-y: hidden;
