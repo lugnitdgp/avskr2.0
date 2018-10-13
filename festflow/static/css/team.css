@@ -17,6 +17,7 @@ background-attachment: fixed;
     margin-left: 10vh;
     margin-top:15vh;
     color: #fff;
+    height: 120vh !important;
 }
 
 .card{
