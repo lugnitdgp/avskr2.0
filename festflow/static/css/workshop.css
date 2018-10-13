@@ -1,7 +1,7 @@
 body{
   background-image: url('/static/assets/images/bg.gif');
   background-color: black;
-    background-size: 100% 100%;
+  background-attachment: fixed;
 }
 .event_poster{
   height:100%;
@@ -258,4 +258,7 @@ body{
   .footer {
 		display: none;
 	}
+  .cross{
+    display: none;
+  }
 }
