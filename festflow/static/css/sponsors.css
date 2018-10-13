@@ -1,0 +1,9 @@
+body {
+    background-image: url('/static/assets/images/bg.gif');
+    background-attachment: fixed;
+    background-color:black;
+    height:100vh;
+    width:100vw;
+    overflow-y: scroll;
+
+}
