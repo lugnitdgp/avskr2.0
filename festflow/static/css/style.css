@@ -60,7 +60,7 @@ i {
 
 .header {
 	width: 100vw;
-	height: 21vh !important;
+	height: 12vh !important;
 	background-image: url('../assets/images/header2.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
