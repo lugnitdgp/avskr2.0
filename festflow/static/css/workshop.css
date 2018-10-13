@@ -1,3 +1,8 @@
+body{
+  background-image: url('/static/assets/images/bg.gif');
+  background-color: black;
+    background-size: 100% 100%;
+}
 .event_poster{
   height:100%;
   width:100%;

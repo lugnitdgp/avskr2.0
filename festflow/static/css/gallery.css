@@ -1,4 +1,9 @@
-
+body{
+  background-image: url('/static/assets/images/bg.gif');
+  background-color: black;
+	  background-size: 100% 100%;
+	overflow-y: hidden;
+}
 body{
 	background-color: black;
 		overflow-y: scroll;
