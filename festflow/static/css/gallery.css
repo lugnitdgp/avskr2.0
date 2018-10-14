@@ -1,5 +1,5 @@
 body{
-  background-image: url('/static/assets/images/bg.gif');
+  background-image: url('/static/assets/images/bg5.png');
   background-color: black;
 	background-attachment: fixed;
 	overflow-y: scroll;
@@ -47,7 +47,7 @@ body{
 
 .thumbnail{
 	border: none;
-	background-color: black;
+	background-color:transparent;
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
 	margin-bottom: 5vh;
