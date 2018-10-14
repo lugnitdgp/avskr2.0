@@ -47,7 +47,7 @@ body{
 
 .thumbnail{
 	border: none;
-	background-color: black;
+	background-color:transparent;
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
 	margin-bottom: 5vh;

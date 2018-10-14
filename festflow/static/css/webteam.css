@@ -1,6 +1,7 @@
 body{
   background-image: url('/static/assets/images/bg2.png');
 background-repeat: no-repeat;
+background-size: 100% 100%;
 background-attachment: fixed;
   background-color: black;
   overflow-y: scroll;
@@ -52,7 +53,7 @@ background-attachment: fixed;
 }
 .card_Banner{
     /* ⬇ Photo by Alexandru Acea on Unsplash */
-    background-color: black;
+    background-image: url('/static/assets/images/card.jpg');
 }
 .card_Avatar.a
 {
@@ -81,7 +82,10 @@ background-attachment: fixed;
     {
         background-image: url('/static/assets/images/g.jpg');
     }
-
+    .card_Avatar.p
+    {
+        background-image: url('/static/assets/images/p.jpg');
+    }
 
 
 .heading p{
@@ -96,3 +100,4 @@ background-attachment: fixed;
   text-shadow: 2px 2px 2px black;
 
 }
+.
