@@ -4,6 +4,7 @@ var desc;
 var venue;
 var time;
 var url;
+var contact;
 
 $(document).ready(function(){
   $('.option-bar').flickity({
@@ -38,12 +39,14 @@ $('.event').click(function(){
   venue=jQuery(this).attr('data-venue');
   time=jQuery(this).attr('data-time');
   url=jQuery(this).attr('data-url');
+  contact=jQuery(this).attr('data-contact');
   $(".poster").attr("src", logo);
   $(".event-name").html(name);
   $(".description").html(desc);
   $(".event_venue").html(venue);
   $(".event_time").html(time);
   $(".event-info a").attr("href", url);
+  $(".event_contact").html(contact);
 
   $('.event-description').css({'opacity': 1, 'z-index': 3});
   $('.bg').css({'opacity': 0});

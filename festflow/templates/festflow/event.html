@@ -47,8 +47,10 @@
                                                     data-desc="{{ event.description|safe }}"
                                                     data-venue="{{ event.venue }}"
                                                     data-time="{{ event.date_time }}"
-                                                    data-url="{{ event.get_absolute_url }}" style="background-repeat: no-repeat; background-position: center; background-size: 95% 95%; {% if event.tiles %} background-image: url('{{ event.tiles.url }}') {% endif %}">
-                                                    <span class="branding-bar" style="font-size: 2vh; text-align: center">{{ event.name }}</span>
+                                                    data-url="{{ event.get_absolute_url }}"
+                                                    data-contact="{{ event.contact }}"
+                                                    style="background-repeat: no-repeat; background-position: center; background-size: 95% 95%; {% if event.tiles %} background-image: url('{{ event.tiles.url }}') {% endif %}">
+                                                    <span class="branding-bar" style="font-size: 2vh; text-align: center">{% if not event.tiles %}{{ event.name }}{% endif %}</span>
                 </div>
 
               {% endif %}
@@ -68,12 +70,20 @@
           <div class="event-name"></div>
           <div class="description">
           </div>
-          
-          <div class="info">
-              <img src="{% static "assets/images/venue.png" %}" class="info-icon">
-              <span class="event_venue"></span>
-              <img src="{% static "assets/images/time.png" %}" class="info-icon">
-              <span class="event_time"></span>
+
+          <div class="info row">
+              <div class="col-md-4 col-xs-4 col-sm-4">
+                <span class="fa fa-map-marker"></span>
+                <span class="event_venue"></span>
+              </div>
+              <div class="col-md-4 col-xs-4 col-sm-4">
+                <span class="fa fa-clock-o"></span>
+                <span class="event_time"></span>
+              </div>
+              <div class="col-md-4 col-xs-4 col-sm-4 contact">
+                <span class="fa fa-phone"></span>
+                <span class="event_contact"></span>
+              </div>
           </div>
       </div>
   </div>

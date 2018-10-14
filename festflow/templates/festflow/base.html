@@ -16,7 +16,7 @@
   <meta property="og:title" content="Aavishkar-The Tech Fest, NIT Durgapur">
   <meta property="og:url" content="http://avskr.in/">
   <meta property="og:description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
-  <meta property="og:image" content="http://avskr.in/static/images/avskrLogo.jpg">
+  <meta property="og:image" content="http://avskr.in/static/images/avskr_logo.png">
   <meta property="og:type" content="website">
 
 
@@ -25,7 +25,7 @@
   <meta name="twitter:title" content="Aavishkar-The Tech Fest, NIT Durgapur">
   <meta name="twitter:url" content="http://avskr.in/">
   <meta name="twitter:description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
-  <meta name="twitter:image:src" content="http://avskr.in/static/images/avskrLogo.jpg">
+  <meta name="twitter:image:src" content="http://avskr.in/static/images/avskr_logo.png">
 
 
 
@@ -33,7 +33,7 @@
 
   <meta itemprop="url" content="http://avskr.in/">
   <meta itemprop="description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
-  <meta itemprop="image" content="http://avskr.in/static/images/avskrLogo.jpg">
+  <meta itemprop="image" content="http://avskr.in/static/images/avskr_logo.png">
   {# END SEO #}
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -44,6 +44,7 @@
 
 </head>
 <body>
+  <div class="preloader"></div>
   {% block body_contents %}{% endblock %}
 
   <audio id="mySoundClip">
@@ -54,7 +55,7 @@
   <div id="info">
     <div class="header">
       <div class="row lappy-menu">
-        <div class="col-md-4 offset-md-6 event_lappy">
+        <div class="col-md-4 offset-md-7 event_lappy">
           <div class="row">
             <div class="col-md-3">
               <p class="menus {% if request.path == "/" %}active{% endif %}" id="menu"><a href="/">Home</a></p>
@@ -69,7 +70,7 @@
             <div class="col-md-3">
               <p class="menus {% if "/attractions/" in request.path %}active{% endif %}" id="menu"><a href="/attractions/">Attractions</a></p>
               <p class="menus {% if "/ignitia/" in request.path %}active{% endif %}" id="menu"><a href="/ignitia/">Ignitia</a></p>
-              <p class="menus" id="menu"><a href="http://sciencex.avskr.in">ScienceX</a></p>
+              <p class="menus" id="menu"><a href="http://sciencex.avskr.in" target="_blank">ScienceX</a></p>
             </div>
             <div class="col-md-3">
               <p class="menus {% if "/teams/" in request.path %}active{% endif %}" id="menu"><a href="/teams/">Team</a></p>
@@ -108,7 +109,7 @@
             <a href="/ignitia/">
               <li>Ignitia</li>
             </a>
-            <a href="http://sciencex.avskr.in">
+            <a href="http://sciencex.avskr.in" target="_blank">
               <li>ScienceX</li>
             </a>
             <a href="/teams/">
@@ -169,6 +170,11 @@
   </script>
 
   <script>
+
+    /* preloader */
+    $(window).on('load', function() {
+      $('.preloader').fadeOut('slow');
+    });
 
     var beepOne = $("#mySoundClip")[0];
       $("#switch")

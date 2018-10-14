@@ -1,5 +1,6 @@
 body{
-  background-image: url('/static/assets/images/bg.gif');
+  background-image: url('/static/assets/images/event_bg2.jpg');
+  background-size: cover;
   background-color: black;
 	 background-attachment: fixed;
 	overflow-y: hidden;
@@ -7,7 +8,7 @@ body{
 .events {
     width: 90%;
     height: 70vh;
-    background-color: rgb(255, 248, 220);
+    background-color: #fff;
     margin-top: 7vh;
     margin-right: 10px;
     opacity: 0;
@@ -18,7 +19,9 @@ body{
     overflow-y: auto;
 }
 
-
+.contact {
+  float: right;
+}
 
 .nxt {
     display: none;
@@ -228,7 +231,7 @@ body{
       top:15vh;
       left:4%;
       width:92%;
-      height:82vh;
+      height:80vh;
     }
 
     .event-poster {
@@ -259,8 +262,6 @@ body{
       left: 5%;
       width: 90%;
       height: 60%;
-      text-align: center;
-      margin-bottom: 2%;
       margin-top:2%;
       padding-top: 0%;
       padding-left:1%;
@@ -270,10 +271,12 @@ body{
     }
 
     .info {
-        width: 80%;
+        /* width: 80%;
         height:7%;
         border-top: 1px solid white;
-        text-align: center;
+        text-align: center; */
+        width: 100%;
+        margin-bottom: 5vh;
     }
 
     .event-info {
