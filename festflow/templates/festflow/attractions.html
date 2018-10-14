@@ -10,13 +10,13 @@
 {% block body_contents %}
 <div class="work">
   {% for attraction in all_attractions %}
-    <div data-tilt class="work_bg work-{{ forloop.counter }}"
+    <div class="work_bg work-{{ forloop.counter }}"
           data-name="{{ attraction.name }}"
           data-logo="{{ attraction.logo.url }}"
           data-desc="{{ attraction.description|safe }}"
           data-venue="{{ attraction.venue }}"
           data-time="{{ attraction.date_time }}">
-      <img  src="{{ attraction.logo.url }}" class="event_poster">
+      <img data-tilt src="{{ attraction.logo.url }}" class="event_poster">
       <div class="att_name">{{ attraction.name }}</div>
     </div>
   {% endfor %}
