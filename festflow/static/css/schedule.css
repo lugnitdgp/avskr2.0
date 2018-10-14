@@ -1,5 +1,6 @@
 body {
-    background-image: url('/static/assets/images/bg.gif');
+    background-image: url('/static/assets/images/bg6.jpg');
+    background-size: cover;
     background-attachment: fixed;
     background-color:black;
     height:100vh;
