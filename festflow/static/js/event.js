@@ -30,7 +30,7 @@ $(document).ready(function(){
   });
 });
 
-$('.event').click(function(){
+$('.event.tile-medium').click(function(){
   /* Dynamically change data */
   // jQuery(this).attr('data-title');
   name=jQuery(this).attr('data-name');
