@@ -46,7 +46,12 @@
 <body>
   <div class="preloader"></div>
   {% block body_contents %}{% endblock %}
-
+  <div id="player">
+      <audio autoplay loop>
+       <source src="{% static "assets/audio/bg.mp3" %}" type="audio/mp3">
+                  If you're reading this, audio isn't supported.
+      </audio>
+  </div>
   <audio id="mySoundClip">
   	<source src="{% static "assets/audio/beep.mp3" %}"></source>
   	<source src="{% static "assets/audio/beep.ogg" %}"></source>
@@ -146,6 +151,8 @@
           </ul>
         </div>
       </div>
+
+
     {% endif %}
     <div class="footer">
       <!-- <img src="textures/down_arrow.gif" alt=""> -->
