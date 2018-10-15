@@ -1,9 +1,16 @@
 {% extends "festflow/base.html" %}
 {% block title %} MAP {% endblock %}
 
-{% block body_contents %}
+{% block extra_head %}
+	<style type="text/css">
+		#content{
+			color:black;
+		}
+	</style>
+{% endblock %}
 
-<div id="map"> </div>
+{% block extrajs %}
+
 	  <script>
 		function myLocation(){
 			var mainArena = {lat:23.5467, lng: 87.2915};
@@ -15,6 +22,7 @@
 				zoom: 17,
 				center: center,
 				zoomControl : false,
+				disableDefaultUI: true,
 				styles: [
 	            {elementType: 'geometry', stylers: [{color: '#000000'}]},
 	            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -143,7 +151,7 @@
 	    		infowindow2.open(map, marker2);
 	  		});
 	  		marker3.addListener('click', function() {
-	    		infowindow1.open(map, marker3);
+	    		infowindow3.open(map, marker3);
 	  		});
 	  		marker4.addListener('click', function() {
 	    		infowindow4.open(map, marker4);
@@ -153,4 +161,9 @@
 		}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQDu_3YqogRPElauy_visGSiZXhfvKrUQ&callback=myLocation">
+	</script>
+{% endblock %}
+
+{% block body_contents %}
+<div id="map" style="height:78vh; margin-top:12vh"> </div>
 {% endblock %}
