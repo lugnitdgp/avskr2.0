@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+body.noScroll {
+  overflow: hidden;
+}
+
+
 body {
 	background: #000;
 	color: #fff;
@@ -12,7 +17,7 @@ body {
 }
 
 .preloader {
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    width: 100%;
