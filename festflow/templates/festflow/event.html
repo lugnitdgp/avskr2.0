@@ -30,7 +30,7 @@
       {% for singlegroup in all_groups %}
         {% if singlegroup.group_name|slugify != "workshop" and singlegroup.group_name|slugify != "attractions" and singlegroup.group_name|slugify != "ignitia" %}
           <div class="events tiles-grid">
-            <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
+            <div class="event event_group_tiles" data-role="tile" data-size="large" data-effect="animate-slide-up">
               {% if singlegroup.logo %}
                 <div class="slide"><img src="{{singlegroup.logo.url}}" class="img-fluid" style="height: 100%"></div>
               {% endif %}
@@ -41,7 +41,7 @@
             </div>
             {% for event in all_events %}
               {% if event.group|slugify == singlegroup|slugify %}
-                <div class="event" data-role="tile" data-size="medium" data-tilt
+                <div class="event event_tiles" data-role="tile" data-size="medium" data-tilt
                                                     data-name="{{ event.name }}"
                                                     data-logo="{{ event.logo.url }}"
                                                     data-desc="{{ event.description|safe }}"
@@ -87,5 +87,7 @@
           </div>
       </div>
   </div>
+
+  <img src="{% static "assets/images/messi.png" %}" alt="" class="messi">
 
 {% endblock %}

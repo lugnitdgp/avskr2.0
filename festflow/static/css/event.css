@@ -2,7 +2,7 @@ body{
   background-image: url('/static/assets/images/event_bg2.jpg');
   background-size: cover;
   background-color: black;
-	 background-attachment: fixed;
+	background-attachment: fixed;
 	overflow-y: hidden;
 }
 .events {
@@ -38,6 +38,12 @@ body{
     width: 40vw;
     perspective-origin: center;
     overflow: hidden;
+}
+
+.messi {
+  margin-left: 70vw !important;
+  margin-top: 40vh !important;
+  filter: drop-shadow(3px 1px 4px grey) !important;
 }
 
 .event-category {
@@ -104,6 +110,7 @@ body{
     height: 100vh;
     margin-left: 5%;
     margin-top: 2%;
+    overflow-y: hidden !important;
 }
 
 
@@ -160,6 +167,17 @@ body{
     color: whitesmoke;
     font-size: 8vh;
 }
+
+/* .event_tiles {
+  width: 8vw !important;
+  height: 8vw !important;
+  padding-left: 0%;
+}
+
+.event_group_tiles {
+  width: 16vw !important;
+  height: 16vw !important;
+} */
 
 .description {
     position: absolute;
@@ -221,9 +239,9 @@ body{
 .event.tile-medium{
   background-color: rgba(0,0,0,0.4);
 }
-.footer{
+/* .footer{
   display: none;
-}
+} */
 @media screen and ( max-width: 976px) {
     .event-description {
       overflow-y: scroll;
@@ -327,7 +345,7 @@ body{
     }
 }
 
-@media screen and ( max-width: 600px) {
+@media screen and ( max-width: 1024px) {
   .expand {
     top: 70vh;
   }
@@ -347,6 +365,9 @@ body{
       overflow-y: scroll;
       overflow-x: hidden;
 
+  }
+  .messi {
+    display: none;
   }
 
 }
