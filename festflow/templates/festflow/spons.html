@@ -1,10 +1,9 @@
 {% extends "festflow/base.html" %}
 {% load static %}
 
-{% block title %} Aavishkar 2018 - Sponsors {% endblock %}
+{% block title %} Aavishkar 2.0 | Sponsors {% endblock %}
 
 {% block extra_head %}
-<link rel="stylesheet" type="text/css" href="{% static "css/about.css"%}"/>
 	{# SEO #}
 	<meta name="description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
 	<meta name="keywords" content="Aavishkar, Techfest, hackathon, nit, durgapur, fest, open source, maths, tech">
@@ -31,10 +30,55 @@
 	<meta itemprop="description" content="Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions.">
 	<meta itemprop="image" content="http://avskr.in/static/images/avskrLogo.jpg">
 	{# END SEO #}
-
+	<link rel="stylesheet" type="text/css" href="{% static "css/sponsors.css"%}"/>
 {% endblock %}
 
 
 {% block body_contents %}
-	<h1 style="margin-top: 25vh; text-align: center">To be Updated soon !!</h1>
+	<div class="container">
+		<div style="font-size:5em;font-color:;font-style:cursive;text-align:center">
+			PAST SPONSORS
+		</div>
+		<br></br>
+		{% for group, sponsors in sponsors.items %}
+				{% if group.group_name == "Title Sponsor" %}
+					<div style="font-size:2em;text-align:center">{{ group.group_name }}</div>
+					<div class="row" >
+						{% for sponsor in sponsors %}
+							<div class="title">
+								<img src="{{sponsor.logo.url}}" style="width:200px; margin:30px; ">
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+		{% endfor %}
+
+		{% for group, sponsors in sponsors.items %}
+			{% if group.group_name != "Title Sponsor" %}
+				<div style="font-size:2em;text-align:center">{{ group.group_name }}</div>
+				<div class="row" >
+					{% if sponsors.count == 1 %}
+						{% for sponsor in sponsors %}
+			        {% if forloop.counter0|divisibleby:3 %}<div class='row'>{% endif %}
+							<div class="col-sm-8 col-md-offset-4">
+								<img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;">
+							</div>
+							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
+						{% endfor %}
+					{% else %}
+						{% for sponsor in sponsors %}
+			        {% if forloop.counter0|divisibleby:3 %}<div class='row' style="width: 100%">{% endif %}
+							<div class="col-md-4">
+								<img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;">
+							</div>
+							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
+						{% endfor %}
+					{% endif %}
+				</div>
+				<br></br><br></br>
+				<br></br><br></br>
+				<br></br>
+			{% endif %}
+		{% endfor %}
+	</div>
 {% endblock %}
