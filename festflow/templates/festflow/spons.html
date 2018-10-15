@@ -46,13 +46,14 @@
 					<div class="row" >
 						{% for sponsor in sponsors %}
 							<div class="title">
-								<img src="{{sponsor.logo.url}}" style="width:200px; margin:30px; ">
+								<img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; ">
 							</div>
 						{% endfor %}
 					</div>
 				{% endif %}
 		{% endfor %}
-
+		<br> </br>
+		<br> </br>
 		{% for group, sponsors in sponsors.items %}
 			{% if group.group_name != "Title Sponsor" %}
 				<div style="font-size:2em;text-align:center">{{ group.group_name }}</div>
