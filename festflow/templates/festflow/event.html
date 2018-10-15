@@ -30,7 +30,7 @@
       {% for singlegroup in all_groups %}
         {% if singlegroup.group_name|slugify != "workshop" and singlegroup.group_name|slugify != "attractions" and singlegroup.group_name|slugify != "ignitia" %}
           <div class="events tiles-grid">
-            <div class="event event_group_tiles" data-role="tile" data-size="large" data-effect="animate-slide-up">
+            <div class="event" data-role="tile" data-size="large" data-effect="animate-slide-up">
               {% if singlegroup.logo %}
                 <div class="slide"><img src="{{singlegroup.logo.url}}" class="img-fluid" style="height: 100%"></div>
               {% endif %}
@@ -41,7 +41,7 @@
             </div>
             {% for event in all_events %}
               {% if event.group|slugify == singlegroup|slugify %}
-                <div class="event event_tiles" data-role="tile" data-size="medium" data-tilt
+                <div class="event" data-role="tile" data-size="medium" data-tilt
                                                     data-name="{{ event.name }}"
                                                     data-logo="{{ event.logo.url }}"
                                                     data-desc="{{ event.description|safe }}"
@@ -49,10 +49,10 @@
                                                     data-time="{{ event.date_time }}"
                                                     data-url="{{ event.get_absolute_url }}"
                                                     data-contact="{{ event.contact }}"
+                                                    data-problem_statement="{% if event.problem_statement_file %}{{ event.problem_statement_file.url }}{% endif %}"
                                                     style="background-repeat: no-repeat; background-position: center; background-size: 95% 95%; {% if event.tiles %} background-image: url('{{ event.tiles.url }}') {% endif %}">
                                                     <span class="branding-bar" style="font-size: 2vh; text-align: center">{% if not event.tiles %}{{ event.name }}{% endif %}</span>
                 </div>
-
               {% endif %}
             {% endfor %}
           </div>
@@ -70,7 +70,10 @@
           <div class="event-name"></div>
           <div class="description">
           </div>
-
+          <div class="problem_statement">
+            <span>Problem Statement: </span>
+            <a href="" target="_blank"><span class="fa fa-file-pdf-o" style="font-size: 3vh;"></span></a>
+          </div>
           <div class="info row">
               <div class="col-md-4 col-xs-4 col-sm-4">
                 <span class="fa fa-map-marker"></span>
