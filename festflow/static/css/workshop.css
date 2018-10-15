@@ -1,6 +1,7 @@
 body{
-  background-image: url('/static/assets/images/bg3.jpg');
+  background-image: url('/static/assets/images/bg6.jpg');
   background-color: black;
+  background-size: cover;
   background-attachment: fixed;
 }
 .description a {
@@ -55,7 +56,8 @@ body{
      width: 67vw;
      opacity: 1;
      transition: all .2s ease-in-out;
-     background-color: rgba(32, 80, 92, 0.6);
+     /* background-color: rgba(32, 80, 92, 0.6); */
+      background: rgba(0, 0, 0, 0.8);
      border: 1px solid rgba(200, 200, 200, 0.8);
      z-index: 5;
 
