@@ -10,12 +10,18 @@
 	height: 12.55vh;
 }
 
+.fa:hover{
+	color:white!important;
+}
+.fas:hover{
+	color:white!important;
+}
 .instruction {
 	border: 1px;
 	width: 20%;
 	float: right;
 	margin-top: 10%;
-		background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	height: 12.55vh;
 }
 .instruction ul{

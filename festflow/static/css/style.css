@@ -73,7 +73,7 @@ i {
 
 .header {
 	width: 100vw;
-	height: 19vh !important;
+	height: 20vh !important;
 	background-image: url('../assets/images/header.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -85,7 +85,7 @@ i {
 	right: 2%;
 	position: fixed;
 	bottom: 2%;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 .social-icons i {
 	border: none;
@@ -93,7 +93,7 @@ i {
 }
 
 .social-icons i:hover {
-	color: blue;
+	color: white;
 }
 
 p {
