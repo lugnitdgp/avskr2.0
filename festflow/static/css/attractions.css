@@ -2,6 +2,8 @@ body{
   background-image: url('/static/assets/images/bg4.jpg');
   background-attachment: fixed;
   background-color: black;
+  overflow-y: scroll;
+  height: 138vh;
 }
 .event_poster{
   height:80%;
@@ -83,10 +85,37 @@ body{
   z-index: 0;
   cursor: pointer;
 }
+.work-7{
+  position:absolute;
+  top:95%;
+  left:7.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
+}
+.work-8{
+  position:absolute;
+  top:95%;
+  left:37.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
+}
+.work-9{
+  position:absolute;
+  top:95%;
+  left:68.5%;
+  width:22%;
+  height:40%;
+  z-index: 0;
+  cursor: pointer;
+}
 
 
 .event-description {
-     position: absolute;
+     position: fixed;
      top: 15vh;
      left: 10vw;
      height: 65vh;
@@ -180,7 +209,7 @@ body{
 
 
 
-@media screen and (max-width:600px)
+@media screen and (max-width:1024px)
 {
   body{
     width:98%;
@@ -189,22 +218,20 @@ body{
 
   }
   .work{
-    height:97vh;
+    /* position: absolute;
+    height:150vh;
     width:95vw;
     overflow-y: hidden;
-    left:4vw;
+    left:4vw; */
+
+    position:absolute;
+    left:1%;
+    width:100%;
+    height:80%;
   }
   .work-1{
     position:absolute;
     top:5%;
-    left:1%;
-    width:45%;
-    height:20%;
-    border:1px solid white;
-  }
-  .work-3{
-    position:absolute;
-    top:32%;
     left:1%;
     width:45%;
     height:20%;
@@ -218,9 +245,17 @@ body{
     height:20%;
     border:1px solid white;
   }
+  .work-3{
+    position:absolute;
+    top:35%;
+    left:1%;
+    width:45%;
+    height:20%;
+    border:1px solid white;
+  }
   .work-4{
     position:absolute;
-    top:32%;
+    top:35%;
     left:49%;
     width:45%;
     height:20%;
@@ -228,7 +263,7 @@ body{
   }
   .work-5{
     position:absolute;
-    top:58%;
+    top:65%;
     left:1%;
     width:45%;
     height:20%;
@@ -236,17 +271,42 @@ body{
   }
   .work-6{
     position:absolute;
-    top:58%;
+    top:65%;
     left:49%;
     width:45%;
     height:20%;
     border:1px solid white;
   }
+  .work-7{
+    position:absolute;
+    top:95%;
+    left:1%;
+    width:45%;
+    height:20%;
+    border:1px solid white;
+  }
+  .work-8{
+    position:absolute;
+    top:95%;
+    left:49%;
+    width:45%;
+    height:20%;
+    border:1px solid white;
+  }
+  .work-9{
+    position:absolute;
+    top:125%;
+    left:1%;
+    width:45%;
+    height:20%;
+    border:1px solid white;
+  }
+
 
   .event-description {
       overflow-y: scroll;
       overflow-x: hidden;
-      position:absolute;
+      position:fixed;
       top:15vh;
       left:4%;
       width:92%;
