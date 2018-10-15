@@ -59,6 +59,9 @@ urlpatterns = [
     # social login urls
     url('', include('social_django.urls')),
 
+    #map
+    url(r'^map/$', views.map, name='map'),
+   
     # Form to complete profile
     url(r'^complete_profile/$',
         views.complete_profile, name='complete_profile'),

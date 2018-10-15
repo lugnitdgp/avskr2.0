@@ -1,0 +1,289 @@
+Metadata-Version: 2.0
+Name: coala-bears
+Version: 0.10.0
+Summary: Bears for coala (Code Analysis Application)
+Home-page: http://coala.rtfd.org/
+Author: Lasse Schuirmann, Fabian Neuschmidt, Mischa Krüger
+Author-email: lasse.schuirmann@gmail.com, fabian@neuschmidt.de, makman@alice.de
+License: AGPL-3.0
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Plugins
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications :: Gnome
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: coala (~=0.10.0)
+Requires-Dist: autoflake (~=0.6.6)
+Requires-Dist: autopep8 (~=1.2)
+Requires-Dist: bandit (~=1.2)
+Requires-Dist: click (==6.6)
+Requires-Dist: cmakelint (~=1.3)
+Requires-Dist: cppclean (~=0.12.0)
+Requires-Dist: cpplint (~=1.3)
+Requires-Dist: dennis (~=0.8)
+Requires-Dist: eradicate (~=0.1.6)
+Requires-Dist: guess-language-spirit (~=0.5.2)
+Requires-Dist: html-linter (~=0.3.0)
+Requires-Dist: isort (~=4.2)
+Requires-Dist: munkres3 (~=1.0)
+Requires-Dist: mypy-lang (~=0.4.6)
+Requires-Dist: nbformat (~=4.1)
+Requires-Dist: nltk (~=3.2)
+Requires-Dist: proselint (~=0.7.0)
+Requires-Dist: pycodestyle (~=2.2)
+Requires-Dist: pydocstyle (~=1.1)
+Requires-Dist: pyflakes (~=1.4.0)
+Requires-Dist: pylint (~=1.6)
+Requires-Dist: pyroma (~=2.2.0)
+Requires-Dist: pyyaml (~=3.12)
+Requires-Dist: radon (==1.4.0)
+Requires-Dist: restructuredtext-lint (~=0.17.2)
+Requires-Dist: rstcheck (~=2.2)
+Requires-Dist: safety (~=0.5.1)
+Requires-Dist: scspell3k (~=2.0)
+Requires-Dist: vim-vint (~=0.3.10)
+Requires-Dist: vulture (~=0.10.0)
+Requires-Dist: yamllint (~=1.5)
+Requires-Dist: yapf (~=0.14.0)
+Provides-Extra: alldeps
+Requires-Dist: autoflake (~=0.6.6); extra == 'alldeps'
+Requires-Dist: autopep8 (~=1.2); extra == 'alldeps'
+Requires-Dist: bandit (~=1.2); extra == 'alldeps'
+Requires-Dist: click (==6.6); extra == 'alldeps'
+Requires-Dist: cmakelint (~=1.3); extra == 'alldeps'
+Requires-Dist: cppclean (~=0.12.0); extra == 'alldeps'
+Requires-Dist: cpplint (~=1.3); extra == 'alldeps'
+Requires-Dist: dennis (~=0.8); extra == 'alldeps'
+Requires-Dist: eradicate (~=0.1.6); extra == 'alldeps'
+Requires-Dist: guess-language-spirit (~=0.5.2); extra == 'alldeps'
+Requires-Dist: html-linter (~=0.3.0); extra == 'alldeps'
+Requires-Dist: isort (~=4.2); extra == 'alldeps'
+Requires-Dist: language-check (~=0.8); extra == 'alldeps'
+Requires-Dist: munkres3 (~=1.0); extra == 'alldeps'
+Requires-Dist: mypy-lang (~=0.4.6); extra == 'alldeps'
+Requires-Dist: nbformat (~=4.1); extra == 'alldeps'
+Requires-Dist: nltk (~=3.2); extra == 'alldeps'
+Requires-Dist: proselint (~=0.7.0); extra == 'alldeps'
+Requires-Dist: pycodestyle (~=2.2); extra == 'alldeps'
+Requires-Dist: pydocstyle (~=1.1); extra == 'alldeps'
+Requires-Dist: pyflakes (~=1.4.0); extra == 'alldeps'
+Requires-Dist: pylint (~=1.6); extra == 'alldeps'
+Requires-Dist: pyroma (~=2.2.0); extra == 'alldeps'
+Requires-Dist: pyyaml (~=3.12); extra == 'alldeps'
+Requires-Dist: radon (==1.4.0); extra == 'alldeps'
+Requires-Dist: restructuredtext-lint (~=0.17.2); extra == 'alldeps'
+Requires-Dist: rstcheck (~=2.2); extra == 'alldeps'
+Requires-Dist: safety (~=0.5.1); extra == 'alldeps'
+Requires-Dist: scspell3k (~=2.0); extra == 'alldeps'
+Requires-Dist: vim-vint (~=0.3.10); extra == 'alldeps'
+Requires-Dist: vulture (~=0.10.0); extra == 'alldeps'
+Requires-Dist: yamllint (~=1.5); extra == 'alldeps'
+Requires-Dist: yapf (~=0.14.0); extra == 'alldeps'
+
+.. image:: https://cloud.githubusercontent.com/assets/7521600/15992701/ef245fd4-30ef-11e6-992d-275c5ca7c3a0.jpg
+
+coala-bears
+-----------
+
+coala-bears is a Python package containing all the bears that are officially
+supported by coala. It features more than **78 bears** covering
+**54 languages**. Here is a `generated list <https://github.com/coala/bear-docs/>`_
+that contains information about each bear, such as the languages it supports and
+what fixes it can apply to your code.
+
+-----
+
+.. contents::
+    :local:
+    :depth: 1
+    :backlinks: none
+
+-----
+
+============
+Installation
+============
+
+To install the **latest stable version** run:
+
+.. code-block:: bash
+
+    $ pip3 install coala-bears
+
+|Stable|
+
+To install the latest development version run:
+
+.. code-block:: bash
+
+    $ pip3 install coala-bears --pre
+
+The latest code from the master branch is automatically deployed as the
+development version in PyPI.
+
+To also install all bears for coala at once run:
+
+.. code-block:: bash
+
+    $ pip3 install coala-bears
+
+You can also use ``cib`` (coala Installs Bears), which is an experimental bear
+manager that lets you install, upgrade, uninstall, check dependencies, etc.
+for bears. To install it, run:
+
+.. code-block:: bash
+
+    $ pip3 install cib
+
+For usage instructions, consult
+`this link <http://api.coala.io/en/latest/Developers/Bear_Installation_Tool.html>`__.
+
+Be sure to use the latest version of pip, the default pip from Debian doesn't
+support our dependency version number specifiers. You will have to `use a
+virtualenv <https://github.com/coala/coala/wiki/FAQ#installation-is-failing-help>`__
+in this case.
+
+|PyPI| |Windows| |Linux|
+
+-----
+
+===================
+Languages Supported
+===================
+
+To see what coala can do for your language, run:
+
+.. code-block:: bash
+
+    $ coala --show-bears --filter-by-language Python
+
++----------------------------+----------------------------+----------------------------+
+|                        Languages coala provides algorithms for                       |
++============================+============================+============================+
+| C                          | Latex                      | SQL                        |
++----------------------------+----------------------------+----------------------------+
+| C++                        | Lua                        | Swift                      |
++----------------------------+----------------------------+----------------------------+
+| C#                         | Markdown                   | TypeScript                 |
++----------------------------+----------------------------+----------------------------+
+| CMake                      | Matlab/Octave              | Verilog                    |
++----------------------------+----------------------------+----------------------------+
+| CoffeeScript               | Natural Language (English) | VHDL                       |
++----------------------------+----------------------------+----------------------------+
+| CSS                        | Perl                       | Vimscript                  |
++----------------------------+----------------------------+----------------------------+
+| Dart                       | PHP                        | XML                        |
++----------------------------+----------------------------+----------------------------+
+| Fortran                    | Python 2                   | YAML                       |
++----------------------------+----------------------------+----------------------------+
+| Go                         | Python 3                   |                            |
++----------------------------+----------------------------+----------------------------+
+| Haskell                    | R                          |                            |
++----------------------------+----------------------------+----------------------------+
+| HTML                       | reStructured Text          |                            |
++----------------------------+----------------------------+----------------------------+
+| Java                       | Ruby                       |                            |
++----------------------------+----------------------------+----------------------------+
+| JavaScript                 | Scala                      |                            |
++----------------------------+----------------------------+----------------------------+
+| JSP                        | SCSS                       |                            |
++----------------------------+----------------------------+----------------------------+
+| Julia                      | sh & bash scripts          |                            |
++----------------------------+----------------------------+----------------------------+
+
+The number of bears grows every day! If you want to see any particular
+functionality be sure to submit an issue, but please read the `Getting Involved`_
+section before doing so.
+
+You can read more at our `documentation <http://coala.io/writingbears>`__.
+There you can learn how to easily write bears yourself! Be sure to let us know
+if you do so, so we'll be able to include it here and spread the word about it.
+
+-----
+
+=====
+Usage
+=====
+
+For more information about how to do basic analysis, check out the
+`coala README <https://github.com/coala/coala#usage>`__.
+
+-----
+
+================
+Getting Involved
+================
+
+If you would like to be a part of the coala community, you can check out our
+`Getting In Touch <http://coala.readthedocs.io/en/latest/Help/Getting_In_Touch.html>`__
+page or ask us at our active Gitter channel, where we have maintainers from
+all over the world. We appreciate any help!
+
+We also have a
+`newcomer guide <http://coala.io/newcomer>`__
+to help you get started by fixing an issue yourself! If you get stuck anywhere
+or need some help, feel free to contact us on Gitter or drop a mail at our
+`newcomer mailing list <https://groups.google.com/d/forum/coala-newcomers>`__.
+
+|gitter|
+
+-----
+
+=======
+Support
+=======
+
+Feel free to contact us at our `Gitter channel <https://gitter.im/coala/coala>`__, we'd be happy to help!
+
+If you are interested in commercial support, please contact us on the Gitter
+channel as well.
+
+You can also drop an email at our
+`mailing list <https://github.com/coala/coala/wiki/Mailing-Lists>`__.
+
+-----
+
+=======
+Authors
+=======
+
+coala is maintained by a growing community. Please take a look at the
+meta information in `setup.py <setup.py>`__ for the current maintainers.
+
+-----
+
+=======
+License
+=======
+
+|AGPL|
+
+
+.. |Stable| image:: https://img.shields.io/badge/latest%20stable-0.8.0-green.svg
+.. |PyPI| image:: https://img.shields.io/pypi/v/coala-bears.svg
+   :target: https://pypi.python.org/pypi/coala-bears
+.. |Linux| image:: https://img.shields.io/circleci/project/coala/coala-bears/master.svg?label=linux%20build
+   :target: https://circleci.com/gh/coala/coala-bears
+.. |Windows| image:: https://img.shields.io/appveyor/ci/coala/coala-bears/master.svg?label=windows%20build
+   :target: https://ci.appveyor.com/project/coala/coala-bears/branch/master
+.. |Documentation Status| image:: https://readthedocs.org/projects/coala/badge/?version=latest
+   :target: http://coala.rtfd.org/
+.. |codecov.io| image:: https://img.shields.io/codecov/c/github/coala/coala-bears/master.svg?label=branch%20coverage
+   :target: https://codecov.io/github/coala/coala-bears
+.. |gitter| image:: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
+   :target: https://gitter.im/coala/coala
+.. |AGPL| image:: https://img.shields.io/github/license/coala/coala-bears.svg
+   :target: https://www.gnu.org/licenses/agpl-3.0.html
+
+

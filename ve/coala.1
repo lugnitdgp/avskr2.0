@@ -1,0 +1,639 @@
+.TH coala 1 2017\-02\-04
+.SH NAME
+coala
+.SH SYNOPSIS
+ \fBcoala\fR [-h] [-v] [-C] [--ci] [--json] [--format [STR]] [-c FILE] [-F] [-I]
+      [-s [FILE]] [--disable-caching] [--flush-cache] [--no-autoapply-warn]
+      [-b NAME [NAME ...]] [-f FILE [FILE ...]] [-i FILE [FILE ...]]
+      [--limit-files FILE [FILE ...]] [-d DIR [DIR ...]] [-V] [-L ENUM]
+      [-m ENUM] [-N] [-B] [-l LANG [LANG ...]] [-p LANG [LANG ...]] [-D]
+      [--show-details] [--log-json] [-o FILE] [-r [RELPATH]]
+      [-S SETTING [SETTING ...]] [-a] [-j JOBS] [-n]
+      [TARGETS [TARGETS ...]]
+
+
+.SH DESCRIPTION
+.. image:: https://cloud.githubusercontent.com/assets/15197846/21435381/96e50466\-c89f\-11e6\-8f0c\-95267da389cf.png
+.br
+
+.br
+coala: Linting and fixing code for all languages
+.br
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.br
+
+.br
+**coala provides a unified command\-line interface for linting and fixing all
+.br
+your code, regardless of the programming languages you use.**
+.br
+
+.br
+With coala, users can create
+.br
+`rules and standards <http://docs.coala.io/en/latest/Users/coafile.html>`__
+.br
+to be followed in the source
+.br
+code. coala has an **user\-friendly interface** that is completely customizable.
+.br
+It can be used in any environment and is completely modular.
+.br
+
+.br
+coala has a set of official bears (plugins) for several languages, including
+.br
+popular languages such as **C/C++**, **Python**, **JavaScript**, **CSS**,
+.br
+**Java** and many more, in addition to some generic language independent
+.br
+algorithms. To learn more about the different languages supported and the
+.br
+bears themselves,
+.br
+`click here. <https://github.com/coala/bear\-docs/blob/master/README.rst>`__
+.br
+
+.br
+To see what coala can do for your language, run:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ coala \-\-show\-bears \-\-filter\-by\-language Python
+.br
+
+.br
+You can generate a configuration from your command line arguments with the `\-s`
+.br
+argument. Alternatively you can use
+.br
+`coala\-quickstart <https://github.com/coala/coala\-quickstart/blob/master/README.rst>`__
+.br
+to generate a configuration tailored for your project.
+.br
+
+.br
+|Linux Build Status| |Windows Build status| |Scrutinizer Code Quality|
+.br
+|codecov.io| |Documentation Status| |Gitmate|
+.br
+
+.br
+.. Start ignoring LineLengthBear
+.br
+
+.br
+======================================= ========================================= ================================================= ====================================================== =========================================================
+.br
+`Official Website <http://coala.io/>`__ `Documentation <https://docs.coala.io>`__ `Twitter <https://twitter.com/coala_analyzer>`__  `Facebook <https://www.facebook.com/coalaAnalyzer/>`__ `Video Demo <https://asciinema.org/a/42968?autoplay=1>`__
+.br
+======================================= ========================================= ================================================= ====================================================== =========================================================
+.br
+
+.br
+.. Stop ignoring
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+.. contents::
+.br
+    :local:
+.br
+    :depth: 1
+.br
+    :backlinks: none
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+========
+.br
+Features
+.br
+========
+.br
+
+.br
+* Out\-of\-the\-box support for various `popular languages <https://github.com/coala/bear\-docs/blob/master/README.rst>`__,
+.br
+  such as **C/C++**, **Python**, **Javascript**, **CSS**, **Java** and many
+.br
+  others with built\-in check routines.
+.br
+* User\-friendly interfaces such as JSON, interactive CLI or any custom format.
+.br
+* Plugins for
+.br
+  `gedit <https://github.com/coala/coala\-gedit>`__,
+.br
+  `Sublime Text <https://github.com/coala/coala\-sublime>`__,
+.br
+  `Atom <https://github.com/coala/coala\-atom>`__,
+.br
+  `Vim <https://github.com/coala/coala\-vim>`__ and
+.br
+  `Emacs <https://github.com/coala/coala\-emacs>`__.
+.br
+* Optimized performace with multi\-threading to parallelize the routines \- can
+.br
+  complete a 26000 line python repository in less than 3 seconds.
+.br
+* File caching support \- run only on changed files.
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+============
+.br
+Installation
+.br
+============
+.br
+
+.br
+To install the **latest stable version** run:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ pip3 install coala
+.br
+
+.br
+**Make sure you have Python >= 3.4 and pip >= 6 installed.**
+.br
+
+.br
+|Stable|
+.br
+
+.br
+To install the latest development version run:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ pip3 install coala \-\-pre
+.br
+
+.br
+The latest code from the master branch is automatically deployed as the
+.br
+development version in PyPI.
+.br
+
+.br
+To also install all bears for coala at once run:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ pip3 install coala\-bears
+.br
+
+.br
+You can also use ``cib`` (coala Installs Bears), which is an experimental bear
+.br
+manager that lets you install, upgrade, uninstall, check dependencies, etc.
+.br
+for bears. To install it, run:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ pip3 install cib
+.br
+
+.br
+For usage instructions, consult
+.br
+`this link <http://api.coala.io/en/latest/Developers/Bear_Installation_Tool.html>`__.
+.br
+
+.br
+|PyPI| |Windows| |Linux|
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+=====
+.br
+Usage
+.br
+=====
+.br
+
+.br
+There are two options to run coala:
+.br
+
+.br
+* using a ``.coafile``, a project specific configuration file that will store
+.br
+  all your settings for coala
+.br
+* using command\-line arguments
+.br
+
+.br
+Using a ``.coafile``
+.br
+********************
+.br
+
+.br
+A sample ``.coafile`` will look something like this:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    [Spacing]
+.br
+    files = src/**/*.py
+.br
+    bears = SpaceConsistencyBear
+.br
+    use_spaces = True
+.br
+
+.br
+* The ``files`` key tells coala which files to lint \- here we're linting all
+.br
+  python files inside the ``src/`` directory by using a glob expression.
+.br
+* The ``bears`` key specifies which bears (plugins) you want to use. We support
+.br
+  a huge number of languages and you can find the whole list
+.br
+  `here <https://github.com/coala/bear\-docs/blob/master/README.rst>`__.
+.br
+  If you don't find your language there, we've got some
+.br
+  `bears that work for all languages <https://github.com/coala/bear\-docs/blob/master/README.rst#all>`__. Or you can file an issue and we would create a bear for you!
+.br
+* ``use_spaces`` enforces spaces over tabs in the codebase. ``use_spaces`` is a
+.br
+  setting for the ``SpaceConsistencyBear`` defined
+.br
+  `here <https://github.com/coala/bear\-docs/blob/master/docs/SpaceConsistencyBear.rst>`__.
+.br
+
+.br
+``[Spacing]`` is a *section*. Sections are executed in the order you
+.br
+define them.
+.br
+
+.br
+Store the file in the project's root directory and run coala:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ coala
+.br
+
+.br
+Please read our
+.br
+`coafile specification <http://docs.coala.io/en/latest/Users/coafile.html>`__
+.br
+to learn more.
+.br
+
+.br
+Using command\-line arguments
+.br
+****************************
+.br
+
+.br
+However, if you don't want to save your settings, you can also run coala with
+.br
+command line arguments:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ coala \-\-files=setup.py \-\-bears=SpaceConsistencyBear \-S use_spaces=True
+.br
+
+.br
+Note that this command does the same thing as having a coafile and running
+.br
+`coala`. The advantage of having a coafile is that you don't need to enter the
+.br
+settings as arguments everytime.
+.br
+
+.br
+To get the complete list of arguments and their meaning, run:
+.br
+
+.br
+.. code\-block:: bash
+.br
+
+.br
+    $ coala \-\-help
+.br
+
+.br
+You can find a quick demo of coala here:
+.br
+
+.br
+|asciicast|
+.br
+
+.br
+.. |asciicast| image:: https://cdn.rawgit.com/coala/artwork/master/artwork/asciinema_demo/asciinema_demo.png
+.br
+   :target: https://asciinema.org/a/42968?autoplay=1
+.br
+   :width: 100%
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+======
+.br
+Awards
+.br
+======
+.br
+
+.br
+.. image:: http://www.yegor256.com/images/award/2016/winner\-sils.png
+.br
+   :alt: Awards \- Yegor256 2016 Winner
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+================
+.br
+Getting Involved
+.br
+================
+.br
+
+.br
+If you would like to be a part of the coala community, you can check out our
+.br
+`Getting In Touch <http://docs.coala.io/en/latest/Help/Getting_In_Touch.html>`__
+.br
+page or ask us at our active Gitter channel, where we have maintainers from
+.br
+all over the world. We appreciate any help!
+.br
+
+.br
+We also have a
+.br
+`newcomer guide <http://coala.io/newcomer>`__
+.br
+to help you get started by fixing an issue yourself! If you get stuck anywhere
+.br
+or need some help, feel free to contact us on Gitter or drop a mail at our
+.br
+`newcomer mailing list <https://groups.google.com/d/forum/coala\-newcomers>`__.
+.br
+
+.br
+|gitter|
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+=======
+.br
+Support
+.br
+=======
+.br
+
+.br
+Feel free to contact us at our `Gitter channel <https://gitter.im/coala/coala>`__, we'd be happy to help!
+.br
+
+.br
+You can also drop an email at our
+.br
+`mailing list <https://github.com/coala/coala/wiki/Mailing\-Lists>`__.
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+=======
+.br
+Authors
+.br
+=======
+.br
+
+.br
+coala is maintained by a growing community. Please take a look at the
+.br
+meta information in `setup.py <setup.py>`__ for the current maintainers.
+.br
+
+.br
+\-\-\-\-\-
+.br
+
+.br
+=======
+.br
+License
+.br
+=======
+.br
+
+.br
+|AGPL|
+.br
+
+.br
+.. |Windows| image:: https://img.shields.io/badge/platform\-Windows\-brightgreen.svg
+.br
+.. |Linux| image:: https://img.shields.io/badge/platform\-Linux\-brightgreen.svg
+.br
+.. |Stable| image:: https://img.shields.io/badge/latest%20stable\-0.9.0\-green.svg
+.br
+.. |PyPI| image:: https://img.shields.io/pypi/pyversions/coala.svg
+.br
+   :target: https://pypi.python.org/pypi/coala
+.br
+.. |Linux Build Status| image:: https://img.shields.io/circleci/project/coala/coala/master.svg?label=linux%20build
+.br
+   :target: https://circleci.com/gh/coala/coala
+.br
+.. |Windows Build status| image:: https://img.shields.io/appveyor/ci/coala/coala/master.svg?label=windows%20build
+.br
+   :target: https://ci.appveyor.com/project/coala/coala/branch/master
+.br
+.. |Scrutinizer Code Quality| image:: https://img.shields.io/scrutinizer/g/coala\-analyzer/coala.svg?label=scrutinizer%20quality
+.br
+   :target: https://scrutinizer\-ci.com/g/coala\-analyzer/coala/?branch=master
+.br
+.. |codecov.io| image:: https://img.shields.io/codecov/c/github/coala/coala/master.svg?label=branch%20coverage
+.br
+   :target: https://codecov.io/github/coala/coala?branch=master
+.br
+.. |Documentation Status| image:: https://readthedocs.org/projects/coala/badge/?version=latest
+.br
+   :target: http://docs.coala.io/
+.br
+.. |AGPL| image:: https://img.shields.io/github/license/coala/coala.svg
+.br
+   :target: https://www.gnu.org/licenses/agpl\-3.0.html
+.br
+.. |Gitmate| image:: https://img.shields.io/badge/Gitmate\-0%20issues\-brightgreen.svg
+.br
+   :target: http://gitmate.com/
+.br
+.. |gitter| image:: https://badges.gitter.im/coala/coala.svg
+.br
+    :target: https://gitter.im/coala/coala
+.br
+    :alt: Chat on Gitter
+.br
+
+.SH OPTIONS
+  TARGETS               sections to be executed exclusively
+
+  \fB-h\fR, \fB--help\fR
+                        show this help message and exit
+  \fB-v\fR, \fB--version\fR
+                        show program's version number and exit
+
+  \fB-C\fR, \fB--non-interactive\fR
+                        run coala in non interactive mode
+  \fB--ci\fR            continuous integration run, alias for `--non-
+                        interactive`
+  \fB--json\fR          mode in which coala will display output as json
+  \fB--format\fR [STR]  output results with a custom format string, e.g.
+                        "Message: {message}"; possible placeholders: id,
+                        origin, file, line, end_line, column, end_column,
+                        severity, severity_str, message, message_base,
+                        message_arguments, affected_code
+
+  \fB-c\fR FILE, \fB--config\fR FILE
+                        configuration file to be used, defaults to .coafile
+  \fB-F\fR, \fB--find-config\fR
+                        find .coafile in ancestors of the working directory
+  \fB-I\fR, \fB--no-config\fR
+                        run without using any config file
+  \fB-s\fR [FILE], \fB--save\fR [FILE]
+                        save used arguments to a config file to a .coafile,
+                        the given path, or at the value of -c
+  \fB--disable-caching\fR
+                        run on all files even if unchanged
+  \fB--flush-cache\fR   rebuild the file cache
+  \fB--no-autoapply-warn\fR
+                        turn off warning about patches not being auto
+                        applicable
+
+  \fB-b\fR NAME [NAME ...], \fB--bears\fR NAME [NAME ...]
+                        names of bears to use
+  \fB-f\fR FILE [FILE ...], \fB--files\fR FILE [FILE ...]
+                        files that should be checked
+  \fB-i\fR FILE [FILE ...], \fB--ignore\fR FILE [FILE ...]
+                        files that should be ignored
+  \fB--limit-files\fR FILE [FILE ...]
+                        filter the `--files` argument's matches further
+  \fB-d\fR DIR [DIR ...], \fB--bear-dirs\fR DIR [DIR ...]
+                        additional directories which may contain bears
+
+  \fB-V\fR, \fB--verbose\fR
+                        alias for `-L DEBUG`
+  \fB-L\fR ENUM, \fB--log-level\fR ENUM
+                        set log output level to ERROR/INFO/WARNING/DEBUG
+  \fB-m\fR ENUM, \fB--min-severity\fR ENUM
+                        set minimal result severity to INFO/NORMAL/MAJOR
+  \fB-N\fR, \fB--no-color\fR
+                        display output without coloring (excluding logs)
+  \fB-B\fR, \fB--show-bears\fR
+                        list all bears
+  \fB-l\fR LANG [LANG ...], \fB--filter-by-language\fR LANG [LANG ...]
+                        filters `--show-bears` by the given languages
+  \fB-p\fR LANG [LANG ...], \fB--show-capabilities\fR LANG [LANG ...]
+                        show what coala can fix and detect for the given
+                        languages
+  \fB-D\fR, \fB--show-description\fR
+                        show bear descriptions for `--show-bears`
+  \fB--show-details\fR  show bear details for `--show-bears`
+  \fB--log-json\fR      output logs as json along with results (must be called
+                        with --json)
+  \fB-o\fR FILE, \fB--output\fR FILE
+                        write results to the given file (must be called with
+                        --json)
+  \fB-r\fR [\fIRELPATH\fR], \fB--relpath\fR [\fIRELPATH\fR]
+                        return relative paths for files (must be called with
+                        --json)
+
+  \fB-S\fR SETTING [SETTING ...], \fB--settings\fR SETTING [SETTING ...]
+                        arbitrary settings in the form of section.key=value
+  \fB-a\fR, \fB--apply-patches\fR
+                        apply all patches automatically if possible
+  \fB-j\fR \fIJOBS\fR, \fB--jobs\fR \fIJOBS\fR
+                        number of jobs to use in parallel
+  \fB-n\fR, \fB--no-orig\fR
+                        don't create .orig backup files before patching
+.SH LICENSE
+ AGPL-3.0
+.SH MAINTAINER(S)
+ Lasse Schuirmann, Fabian Neuschmidt, Mischa Krüger
+.SH SEE ALSO
+ Online documentation: http://coala.io/

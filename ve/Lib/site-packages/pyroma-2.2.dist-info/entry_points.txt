@@ -1,0 +1,6 @@
+[console_scripts]
+pyroma = pyroma:main
+
+[zest.releaser.prereleaser.before]
+pyroma = pyroma:zester
+
