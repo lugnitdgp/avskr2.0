@@ -113,9 +113,9 @@ p {
 
 .menus a:hover{
 	border: 1px groove solid;
-	padding: 5px;
+	padding: 0.1vw;
 	background: #fff !important;
-	transform: translateZ(10px);
+	/* transform: translateZ(10px); */
 	color: #000 !important;
 	border-radius: 0px;
 

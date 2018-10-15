@@ -1,5 +1,5 @@
 body{
-  background-image: url('/static/assets/images/event_bg2.jpg');
+  background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url('/static/assets/images/event_bg2.jpg');
   background-size: cover;
   background-color: black;
 	background-attachment: fixed;
