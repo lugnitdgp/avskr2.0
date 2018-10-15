@@ -1,0 +1,7 @@
+[console_scripts]
+coala = coalib.coala:main
+coala-ci = coalib.coala_ci:main
+coala-delete-orig = coalib.coala_delete_orig:main
+coala-format = coalib.coala_format:main
+coala-json = coalib.coala_json:main
+

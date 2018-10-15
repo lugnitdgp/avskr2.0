@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: vim-vint
+Version: 0.3.19
+Summary: Lint tool for Vim script Language
+Home-page: https://github.com/Kuniwak/vint
+Author: Kuniwak
+Author-email: orga.chem.job+vint@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Kuniwak/vint/archive/v0.3.19.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Editors
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: PyYAML (~=3.11)
+Requires-Dist: ansicolor (~=0.2.4)
+Requires-Dist: chardet (>=2.3.0)
+
+UNKNOWN
+
+

@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        dennis-cmd=dennis.cmdline:click_run
+    

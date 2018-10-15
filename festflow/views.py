@@ -36,6 +36,9 @@ def about(request):
     context['content'] = About.objects.last()
     return render(request, 'festflow/about.html', context)
 
+def map(request):
+    return render(request,'festflow/map.html')
+
 def events(request):
     context = {}
     all_events = Event.objects.all()

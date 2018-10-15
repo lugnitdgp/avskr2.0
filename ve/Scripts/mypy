@@ -1,0 +1,6 @@
+#!c:\users\arpan\desktop\website_aavishkar\avskr2.0\ve\scripts\python.exe
+"""Mypy type checker command line tool."""
+
+from mypy.main import main
+
+main(__file__)
