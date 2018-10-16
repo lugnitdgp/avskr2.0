@@ -12,12 +12,15 @@ from .utils import *
 # Create your views here.
 
 def index(request):
+    return render(request, 'festflow/index.html')
+
+def home(request):
     context = {}
     profiles_count = Profile.objects.count()
     all_events = Event.objects.all()
     context['profiles_count'] = profiles_count
     context['all_events'] = all_events
-    return render(request, 'festflow/index.html', context)
+    return render(request, 'festflow/home.html', context)
 
 def teams(request):
     context = {}

@@ -63,7 +63,7 @@
         <div class="col-md-4 offset-md-7 event_lappy">
           <div class="row">
             <div class="col-md-3">
-              <p class="menus {% if request.path == "/" %}active{% endif %}" id="menu"><a href="/">Home</a></p>
+              <p class="menus {% if request.path == "/" %}active{% endif %}" id="menu"><a href="/home">Home</a></p>
               <p class="menus {% if "/about/" in request.path %}active{% endif %}" id="menu"><a href="/about/">About Us</a></p>
               <p class="menus {% if "/gallery/" in request.path %}active{% endif %}" id="menu"><a href="/gallery/">Gallery</a></p>
             </div>
@@ -93,7 +93,7 @@
           <span></span>
           <span></span>
           <ul id="nav">
-            <a href="/">
+            <a href="/home/">
               <li>Home</li>
             </a>
             <a href="/about/">
@@ -141,7 +141,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4"><img src="textures/clg.png" alt="" class="right-logo"></div> -->
     </div>
-    {% if request.path == '/' %}
+    {% if "/home/" in request.path %}
       <div id="switch">
         <i class="left"></i>
       </div>
