@@ -49,6 +49,7 @@ body {
   .about p {
     margin-top: 2vh;
     font-size: 4vw;
+    height: 25vh;
   }
   .vl {
     display: none;

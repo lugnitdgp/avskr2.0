@@ -1,8 +1,9 @@
 body{
   background-image: url('/static/assets/images/event_bg2.jpg');
   background-size: cover;
-  background-color: black;
+  background-color: rgba(0,0,0,0.5);
 	 background-attachment: fixed;
+
 	overflow-y: hidden;
 }
 .events {
