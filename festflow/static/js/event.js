@@ -5,6 +5,7 @@ var venue;
 var time;
 var url;
 var contact;
+var problem_statement="null";
 
 $(document).ready(function(){
   $('.option-bar').flickity({
@@ -31,6 +32,7 @@ $(document).ready(function(){
 });
 
 $('.event.tile-medium').click(function(){
+    problem_statement="null";
   /* Dynamically change data */
   // jQuery(this).attr('data-title');
   name=jQuery(this).attr('data-name');
@@ -38,15 +40,25 @@ $('.event.tile-medium').click(function(){
   desc=jQuery(this).attr('data-desc');
   venue=jQuery(this).attr('data-venue');
   time=jQuery(this).attr('data-time');
-  url=jQuery(this).attr('data-url');
+  // url=jQuery(this).attr('data-url');
   contact=jQuery(this).attr('data-contact');
+  problem_statement=jQuery(this).attr('data-problem_statement');
+
   $(".poster").attr("src", logo);
   $(".event-name").html(name);
   $(".description").html(desc);
   $(".event_venue").html(venue);
   $(".event_time").html(time);
-  $(".event-info a").attr("href", url);
+  // $(".event-info a").attr("href", url);
   $(".event_contact").html(contact);
+  console.log(problem_statement);
+  if(problem_statement=="") {
+      $(".problem_statement").hide();
+  }
+  else {
+      $(".problem_statement").show();
+      $(".problem_statement a").attr("href", problem_statement);
+  }
 
   $('.event-description').css({'opacity': 1, 'z-index': 3});
   $('.bg').css({'opacity': 0});

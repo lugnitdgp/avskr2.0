@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: PyPrint
+Version: 0.2.6
+Summary: A library providing printing facilities for python applications.
+Home-page: UNKNOWN
+Author: Lasse Schuirmann, Mischa Krüger
+Author-email: lasse.schuirmann@gmail.com, makman@alice.de
+License: GPL v3
+Platform: any
+Requires-Dist: colorama (~=0.3.7)
+Requires-Dist: termcolor (~=1.1.0)
+
+UNKNOWN
+
+

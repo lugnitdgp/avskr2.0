@@ -1,0 +1,169 @@
+{% extends "festflow/base.html" %}
+{% block title %} MAP {% endblock %}
+
+{% block extra_head %}
+	<style type="text/css">
+		#content{
+			color:black;
+		}
+	</style>
+{% endblock %}
+
+{% block extrajs %}
+
+	  <script>
+		function myLocation(){
+			var mainArena = {lat:23.5467, lng: 87.2915};
+			var newAcad = {lat:23.5480, lng: 87.2933};
+			var adminBuilding = {lat:23.5473, lng: 87.2928}
+			var center = {lat:23.5474, lng: 87.2914}
+			var oldAcad = {lat:23.5479, lng: 87.2914}
+			var map = new google.maps.Map(document.getElementById("map"),{
+				zoom: 17,
+				center: center,
+				zoomControl : false,
+				disableDefaultUI: true,
+				styles: [
+	            {elementType: 'geometry', stylers: [{color: '#000000'}]},
+	            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+	            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+	            {
+	              featureType: 'administrative.locality',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#d59563'}]
+	            },
+	            {
+	              featureType: 'poi',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#d59563'}]
+	            },
+	            {
+	              featureType: 'poi.park',
+	              elementType: 'geometry',
+	              stylers: [{color: '#263c3f'}]
+	            },
+	            {
+	              featureType: 'poi.park',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#6b9a76'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'geometry',
+	              stylers: [{color: '#38414e'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'geometry.stroke',
+	              stylers: [{color: '#212a37'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#9ca5b3'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'geometry',
+	              stylers: [{color: '#746855'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'geometry.stroke',
+	              stylers: [{color: '#1f2835'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#f3d19c'}]
+	            },
+	            {
+	              featureType: 'transit',
+	              elementType: 'geometry',
+	              stylers: [{color: '#2f3948'}]
+	            },
+	            {
+	              featureType: 'transit.station',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#d59563'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'geometry',
+	              stylers: [{color: '#17263c'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#515c6d'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'labels.text.stroke',
+	              stylers: [{color: '#17263c'}]
+	            }
+	          ]
+			});
+			var contentMainArena = '<div id="content">'+
+			'<h3>Main Arena</h3>'+
+			'</div>';
+			var contentNewAcad = '<div id="content">'+
+			'<h3>New Academic Building</h3>'+
+			'</div>';
+			var contentAdminBuilding = '<div id="content">'+
+			'<h3>Director\'s Building</h3>'+
+			'</div>';
+			var contentOldAcad = '<div id="content">'+
+			'<h3>Old Academic Building</h3>'+
+			'</div>';
+			var infowindow1 = new google.maps.InfoWindow({
+				content: contentMainArena
+			});
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentNewAcad
+			});
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentAdminBuilding
+			});
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentOldAcad
+			});
+			var marker1 = new google.maps.Marker({
+				position : mainArena,
+				map : map
+			});
+			var marker2 = new google.maps.Marker({
+				position : newAcad,
+				map : map
+			});
+			var marker3 = new google.maps.Marker({
+				position : adminBuilding,
+				map : map
+			});
+			var marker4 = new google.maps.Marker({
+				position : oldAcad,
+				map : map
+			});
+	   	    marker1.addListener('click', function() {
+	    		infowindow1.open(map, marker1);
+	  		});
+	  		marker2.addListener('click', function() {
+	    		infowindow2.open(map, marker2);
+	  		});
+	  		marker3.addListener('click', function() {
+	    		infowindow3.open(map, marker3);
+	  		});
+	  		marker4.addListener('click', function() {
+	    		infowindow4.open(map, marker4);
+	  		});
+			//AIzaSyDIQUS03Te9RqlKPhE4-PeEE569DeFSYPQ
+			// divyanshu - AIzaSyDQDu_3YqogRPElauy_visGSiZXhfvKrUQ
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQDu_3YqogRPElauy_visGSiZXhfvKrUQ&callback=myLocation">
+	</script>
+{% endblock %}
+
+{% block body_contents %}
+<div id="map" style="height:78vh; margin-top:12vh"> </div>
+{% endblock %}

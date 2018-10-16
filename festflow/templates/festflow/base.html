@@ -47,10 +47,10 @@
   <div class="preloader"></div>
   {% block body_contents %}{% endblock %}
   <div id="player">
-      <audio autoplay loop>
+      <!-- <audio autoplay loop>
        <source src="{% static "assets/audio/bg.mp3" %}" type="audio/mp3">
                   If you're reading this, audio isn't supported.
-      </audio>
+      </audio> -->
   </div>
   <audio id="mySoundClip">
   	<source src="{% static "assets/audio/beep.mp3" %}"></source>
@@ -60,7 +60,7 @@
   <div id="info">
     <div class="header">
       <div class="row lappy-menu">
-        <div class="col-md-4 offset-md-7 event_lappy">
+        <div class="col-md-4 offset-md-6 event_lappy">
           <div class="row">
             <div class="col-md-3">
               <p class="menus {% if request.path == "/" %}active{% endif %}" id="menu"><a href="/">Home</a></p>
@@ -80,9 +80,12 @@
             <div class="col-md-3">
               <p class="menus {% if "/teams/" in request.path %}active{% endif %}" id="menu"><a href="/teams/">Team</a></p>
               <p class="menus {% if "/webteam/" in request.path %}active{% endif %}" id="menu"><a href="/webteam/">Web Credits</a></p>
-              <p class="menus {% if "/sponsors/" in request.path %}active{% endif %}" id="menu"><a href="/sponsors/">Sponsors</a></p>
+              <p class="menus {% if "/sponsors/" in request.path %}active{% endif %}" id="menu"><a href="/sponsors/">Past Sponsors</a></p>
             </div>
           </div>
+        </div>
+        <div class="col-md-2">
+            <div id="map" style="height:28vh; width: 31vh; border-radius: 50%; margin-top: 1vh;"> </div>
         </div>
       </div>
        <!-- NAVBAR -->
@@ -127,7 +130,10 @@
               <li>Gallery</li>
             </a>
             <a href="/sponsors/">
-              <li>Sponsors</li>
+              <li>Past Sponsors</li>
+            </a>
+            <a href="/map/">
+              <li>Map</li>
             </a>
           </ul>
         </div>
@@ -206,6 +212,158 @@
   </script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <script>
+  function myLocation(){
+    var mainArena = {lat:23.5467, lng: 87.2915};
+    var newAcad = {lat:23.5480, lng: 87.2933};
+    var adminBuilding = {lat:23.5473, lng: 87.2928}
+    var center = {lat:23.5474, lng: 87.2914}
+    var oldAcad = {lat:23.5479, lng: 87.2914}
+    var map = new google.maps.Map(document.getElementById("map"),{
+      zoom: 17,
+      center: center,
+      zoomControl : false,
+      disableDefaultUI: true,
+      styles: [
+            {elementType: 'geometry', stylers: [{color: '#000000'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+    });
+    var contentMainArena = '<div id="content">'+
+    '<h3>Main Arena</h3>'+
+    '</div>';
+    var contentNewAcad = '<div id="content">'+
+    '<h3>New Academic Building</h3>'+
+    '</div>';
+    var contentAdminBuilding = '<div id="content">'+
+    '<h3>Director\'s Building</h3>'+
+    '</div>';
+    var contentOldAcad = '<div id="content">'+
+    '<h3>Old Academic Building</h3>'+
+    '</div>';
+    var infowindow1 = new google.maps.InfoWindow({
+      content: contentMainArena
+    });
+    var infowindow2 = new google.maps.InfoWindow({
+      content: contentNewAcad
+    });
+    var infowindow3 = new google.maps.InfoWindow({
+      content: contentAdminBuilding
+    });
+    var infowindow4 = new google.maps.InfoWindow({
+      content: contentOldAcad
+    });
+    var marker1 = new google.maps.Marker({
+      position : mainArena,
+      map : map
+    });
+    var marker2 = new google.maps.Marker({
+      position : newAcad,
+      map : map
+    });
+    var marker3 = new google.maps.Marker({
+      position : adminBuilding,
+      map : map
+    });
+    var marker4 = new google.maps.Marker({
+      position : oldAcad,
+      map : map
+    });
+        marker1.addListener('click', function() {
+        infowindow1.open(map, marker1);
+      });
+      marker2.addListener('click', function() {
+        infowindow2.open(map, marker2);
+      });
+      marker3.addListener('click', function() {
+        infowindow3.open(map, marker3);
+      });
+      marker4.addListener('click', function() {
+        infowindow4.open(map, marker4);
+      });
+    //AIzaSyDIQUS03Te9RqlKPhE4-PeEE569DeFSYPQ
+    // divyanshu - AIzaSyDQDu_3YqogRPElauy_visGSiZXhfvKrUQ
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQDu_3YqogRPElauy_visGSiZXhfvKrUQ&callback=myLocation">
+</script>
 
   {% block extrajs %}
 

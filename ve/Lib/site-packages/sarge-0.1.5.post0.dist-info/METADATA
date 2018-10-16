@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: sarge
+Version: 0.1.5.post0
+Summary: A wrapper for subprocess which provides command pipeline functionality.
+Home-page: http://sarge.readthedocs.org/
+Author: Vinay Sajip
+Author-email: vinay_sajip@yahoo.co.uk
+Maintainer: Vinay Sajip
+Maintainer-email: vinay_sajip@yahoo.co.uk
+License: BSD
+Download-URL: http://pypi.python.org/packages/source/s/sarge/sarge-0.1.5.post0.tar.gz
+Keywords: subprocess,wrapper,external,command
+Platform: Any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Shells
+
+The sarge package provides a wrapper for subprocess which provides command
+pipeline functionality.
+
+This package leverages subprocess to provide easy-to-use cross-platform command
+pipelines with a Posix flavour: you can have chains of commands using ``;``, ``&``,
+pipes using ``|`` and ``|&``, and redirection.
+
+The latest version of sarge can be found on `BitBucket <https://bitbucket.org/vinay.sajip/sarge/>`_::
+
+    https://bitbucket.org/vinay.sajip/sarge/
+
+The latest documentation (kept updated between releases) is on `Read The Docs <http://sarge.readthedocs.org/>`_::
+
+    http://sarge.readthedocs.org/
+
+Please report any problems or suggestions for improvement either via the
+`mailing list <http://groups.google.com/group/python-sarge/>`_ or the `issue
+tracker <https://bitbucket.org/vinay.sajip/sarge/issues/new>`_.
+
+
+

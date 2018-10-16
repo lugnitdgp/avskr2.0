@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+body.noScroll {
+  overflow: hidden;
+}
+
+
 body {
 	background: #000;
 	color: #fff;
@@ -12,7 +17,7 @@ body {
 }
 
 .preloader {
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    width: 100%;
@@ -108,9 +113,9 @@ p {
 
 .menus a:hover{
 	border: 1px groove solid;
-	padding: 5px;
+	padding: 0.1vw;
 	background: #fff !important;
-	transform: translateZ(10px);
+	/* transform: translateZ(10px); */
 	color: #000 !important;
 	border-radius: 0px;
 
