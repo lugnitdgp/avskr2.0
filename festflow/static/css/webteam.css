@@ -1,5 +1,5 @@
 body{
-  background-image: url('/static/assets/images/bg2.png');
+  background-image: url('/static/assets/images/bg.gif');
 background-repeat: no-repeat;
 background-size: 100% 100%;
 background-attachment: fixed;
@@ -53,7 +53,7 @@ background-attachment: fixed;
 }
 .card_Banner{
     /* ⬇ Photo by Alexandru Acea on Unsplash */
-    background-image: url('/static/assets/images/card.jpg');
+    background-color: black;
 }
 .card_Avatar.a
 {
