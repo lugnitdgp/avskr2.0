@@ -36,18 +36,23 @@
 
 {% block body_contents %}
 	<div class="container">
-		<div style="font-size:5em;font-color:;font-style:cursive;text-align:center">
-			PAST SPONSORS
+
+		<div style="font-size:5em;text-align:center">
+			SPONSORS
 		</div>
 		<br></br>
 		{% for group, sponsors in sponsors.items %}
-				{% if group.group_name == "Title Sponsor" %}
+				{% if group.group_name == "Title Sponsor" and group.pastorpresent == "present" or group.pastorpresent == "pastandpresent" %}
 					<div style="font-size:2em;text-align:center">{{ group.group_name }}</div>
 					<div class="row" >
 						{% for sponsor in sponsors %}
-							<div class="title">
-								<img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; ">
-							</div>
+
+							{% if sponsor.pastorpresent == "present" %}
+								<div class="title">
+									<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; "></a>
+								</div>
+							{% endif %}
+
 						{% endfor %}
 					</div>
 				{% endif %}
@@ -55,23 +60,80 @@
 		<br> </br>
 		<br> </br>
 		{% for group, sponsors in sponsors.items %}
-			{% if group.group_name != "Title Sponsor" %}
+			{% if group.group_name != "Title Sponsor" and group.pastorpresent == "present" or group.pastorpresent == "pastandpresent" %}
 				<div style="font-size:2em;text-align:center">{{ group.group_name }}</div>
 				<div class="row" >
 					{% if sponsors.count == 1 %}
 						{% for sponsor in sponsors %}
 			        {% if forloop.counter0|divisibleby:3 %}<div class='row'>{% endif %}
-							<div class="col-sm-8 col-md-offset-4">
-								<img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;">
-							</div>
+								{% if sponsor.pastorpresent == "present" %}
+									<div class="col-sm-8 col-md-offset-4">
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+									</div>
+								{% endif %}
 							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
 						{% endfor %}
 					{% else %}
 						{% for sponsor in sponsors %}
 			        {% if forloop.counter0|divisibleby:3 %}<div class='row' style="width: 100%">{% endif %}
-							<div class="col-md-4">
-								<img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;">
-							</div>
+
+								{% if sponsor.pastorpresent == "present" %}
+									<div class="col-md-4">
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+									</div>
+								{% endif %}
+							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
+						{% endfor %}
+					{% endif %}
+				</div>
+				<br></br><br></br>
+				<br></br><br></br>
+				<br></br>
+			{% endif %}
+		{% endfor %}
+
+		<div style="font-size:5em;text-align:center">
+			PAST SPONSORS
+		</div>
+		<br></br>
+		{% for group, sponsors in sponsors.items %}
+				{% if group.group_name == "Title Sponsor" and group.pastorpresent == "past" or group.pastorpresent == "pastandpresent" %}
+					<div style="font-size:2em;text-align:center">{{ group.group_name }}</div>
+					<div class="row" >
+						{% for sponsor in sponsors %}
+							{% if sponsor.pastorpresent == "past" %}
+								<div class="title">
+									<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; "></a>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				{% endif %}
+		{% endfor %}
+		<br> </br>
+		<br> </br>
+		{% for group, sponsors in sponsors.items %}
+			{% if group.group_name != "Title Sponsor" and group.pastorpresent == "past" or group.pastorpresent == "pastandpresent" %}
+				<div style="font-size:2em;text-align:center">{{ group.group_name }}</div>
+				<div class="row" >
+					{% if sponsors.count == 1 %}
+						{% for sponsor in sponsors %}
+			        {% if forloop.counter0|divisibleby:3 %}<div class='row'>{% endif %}
+								{% if sponsor.pastorpresent == "past" %}
+									<div class="col-sm-8 col-md-offset-4">
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+									</div>
+								{% endif %}
+							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
+						{% endfor %}
+					{% else %}
+						{% for sponsor in sponsors %}
+			        {% if forloop.counter0|divisibleby:3 %}<div class='row' style="width: 100%">{% endif %}
+								{% if sponsor.pastorpresent == "past" %}
+									<div class="col-md-4">
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+									</div>
+								{% endif %}
 							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
 						{% endfor %}
 					{% endif %}
