@@ -49,7 +49,7 @@
 
 							{% if sponsor.pastorpresent == "present" %}
 								<div class="title">
-									<a href="{{sponsor.url}}"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; "></a>
+									<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; "></a>
 								</div>
 							{% endif %}
 
@@ -68,7 +68,7 @@
 			        {% if forloop.counter0|divisibleby:3 %}<div class='row'>{% endif %}
 								{% if sponsor.pastorpresent == "present" %}
 									<div class="col-sm-8 col-md-offset-4">
-										<a href="{{sponsor.url}}"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
 									</div>
 								{% endif %}
 							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
@@ -79,7 +79,7 @@
 
 								{% if sponsor.pastorpresent == "present" %}
 									<div class="col-md-4">
-										<a href="{{sponsor.url}}"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
 									</div>
 								{% endif %}
 							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
@@ -103,7 +103,7 @@
 						{% for sponsor in sponsors %}
 							{% if sponsor.pastorpresent == "past" %}
 								<div class="title">
-									<a href="{{sponsor.url}}"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; "></a>
+									<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px; "></a>
 								</div>
 							{% endif %}
 						{% endfor %}
@@ -121,7 +121,7 @@
 			        {% if forloop.counter0|divisibleby:3 %}<div class='row'>{% endif %}
 								{% if sponsor.pastorpresent == "past" %}
 									<div class="col-sm-8 col-md-offset-4">
-										<a href="{{sponsor.url}}"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
 									</div>
 								{% endif %}
 							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
@@ -131,7 +131,7 @@
 			        {% if forloop.counter0|divisibleby:3 %}<div class='row' style="width: 100%">{% endif %}
 								{% if sponsor.pastorpresent == "past" %}
 									<div class="col-md-4">
-										<a href="{{sponsor.url}}"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
+										<a href="{{sponsor.url}}" target="_blank"><img src="{{sponsor.logo.url}}" style="width:300px; margin:30px;"></a>
 									</div>
 								{% endif %}
 							{% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
