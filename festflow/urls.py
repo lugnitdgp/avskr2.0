@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/assets/images/avskr_logo.png')),
+    url(r'^favicon.ico/$', RedirectView.as_view(url='/static/assets/images/avskr_logo.png')),
 
     # Index Page
     url(r'^$', views.index, name='index'),
