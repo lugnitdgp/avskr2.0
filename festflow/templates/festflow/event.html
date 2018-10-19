@@ -4,6 +4,7 @@
 {% block title %} Aavishkar 2.0 | Events {% endblock %}
 
 {% block extra_head %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="{% static "css/event.css"%}"/>
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
@@ -49,10 +50,10 @@
                                                     data-time="{{ event.date_time }}"
                                                     data-url="{{ event.get_absolute_url }}"
                                                     data-contact="{{ event.contact }}"
+                                                    data-problem_statement="{% if event.problem_statement_file %}{{ event.problem_statement_file.url }}{% endif %}"
                                                     style="background-repeat: no-repeat; background-position: center; background-size: 95% 95%; {% if event.tiles %} background-image: url('{{ event.tiles.url }}') {% endif %}">
                                                     <span class="branding-bar" style="font-size: 2vh; text-align: center">{% if not event.tiles %}{{ event.name }}{% endif %}</span>
                 </div>
-
               {% endif %}
             {% endfor %}
           </div>
@@ -70,7 +71,10 @@
           <div class="event-name"></div>
           <div class="description">
           </div>
-
+          <div class="problem_statement">
+            <span>Problem Statement: </span>
+            <a href="" target="_blank"><span class="fa fa-file-pdf-o" style="font-size: 3vh;"></span></a>
+          </div>
           <div class="info row">
               <div class="col-md-4 col-xs-4 col-sm-4">
                 <span class="fa fa-map-marker"></span>
@@ -87,5 +91,7 @@
           </div>
       </div>
   </div>
+
+  <img src="{% static "assets/images/messi.png" %}" alt="" class="messi">
 
 {% endblock %}

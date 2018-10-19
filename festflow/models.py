@@ -204,6 +204,7 @@ class SponsorGroup(models.Model):
     group_identifier = models.CharField(max_length=50, unique=True,
                                         validators=[lowercaseAlphabet])
     group_name = models.CharField(max_length=100)
+    pastorpresent = models.CharField(max_length=100, default="past", blank=True)
     # event group logo
 
     def __str__(self):
@@ -216,6 +217,10 @@ class Sponsor(models.Model):
     name = models.CharField(max_length=100)
 
     logo = models.ImageField(upload_to='sponsor_logos/')
+
+    url = models.URLField(max_length=200, default="#")
+
+    pastorpresent = models.CharField(max_length=100, default="past", blank=True)
 
     rank = models.IntegerField(default=0)
 

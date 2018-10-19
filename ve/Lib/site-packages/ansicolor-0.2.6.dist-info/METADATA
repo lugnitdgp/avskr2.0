@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: ansicolor
+Version: 0.2.6
+Summary: A library to produce ansi color output and colored highlighting and diffing
+Home-page: https://github.com/numerodix/ansicolor
+Author: Martin Matusiak
+Author-email: numerodix@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+
+UNKNOWN
+
+

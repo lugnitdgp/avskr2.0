@@ -1,32 +1,29 @@
-{% extends "festflow/base.html" %}
 {% load static %}
 
-{% block title %} Aavishkar 2.0 | The Tech Fest, NIT Durgapur {% endblock %}
-
-{% block extra_head %}
-  <link rel="stylesheet" type="text/css" href="{% static "css/index.css"%}"/>
-{% endblock %}
-
-{% block body_contents %}
-  <div id="container"></div>
-{% endblock %}
-
-{% block extrajs %}
-  <script src="{% static "vendor/js/three.js" %}"></script>
-  <script src="{% static "vendor/js/controls/OrbitControls.js" %}"></script>
-  <script src="{% static "vendor/js/THREEx.KeyboardState.js" %}"></script>
-  <script src="{% static "vendor/js/objects/Water.js" %}"></script>
-  <script src="{% static "vendor/js/MTLLoader.js" %}"></script>
-  <script src="{% static "vendor/js/OBJLoader.js" %}"></script>
-  <script src="{% static "vendor/js/loaders/AssimpLoader.js" %}"></script>
-  <script src="{% static "vendor/js/Detector.js" %}"></script>
-  <script src="{% static "vendor/js/libs/stats.min.js" %}"></script>
-
-  <script>
-    $( '#switch' ).click(function() {
-      $( "#toggle" ).toggle( "slide", {direction: "right"} );
-    });
-  </script>
-
-  <script src="{% static "js/index.js" %}"></script>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aavishkar 2.0</title>
+    <style>
+      body {
+      	margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      <link rel="shortcut icon" type="image/png" href="{% static "assets/images/avskr_logo.png" %}" />
+    </style>
+  </head>
+  <body>
+    <!-- <audio autoplay loop>
+     <source src="{% static "assets/audio/bg.mp3" %}" type="audio/mp3"></source>
+                If you're reading this, audio isn't supported.
+    </audio> -->
+    <audio src="{% static "/assets/audio/bg.mp3" %}" autoplay loop>
+    	<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+    </audio>
+    <iframe src="http://localhost:8000/home" style="border: 0; width: 100%; height: 100%">Your browser doesn't support iFrames.</iframe>
+  </body>
+</html>

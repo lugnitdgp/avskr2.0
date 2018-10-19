@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: dependency-management
+Version: 0.3.1
+Summary: coala Dependency Management
+Home-page: UNKNOWN
+Author: Adrian Zatreanu
+Author-email: adrianzatreanu1@gmail.com
+License: AGPL-3.0
+Platform: any
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications :: Gnome
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: sarge (~=0.1.4)
+Requires-Dist: coala-utils (~=0.6)
+
+Contains package manager and requirement classes used by coala.
+
+

@@ -4,86 +4,53 @@
 {% block title %} Aavishkar 2.0 | Schedule {% endblock %}
 
 {% block extra_head %}
-  <link rel="stylesheet" type="text/css" href="{% static "css/schedule.css" %}">
+<link rel="stylesheet" type="text/css" href='{% static "css/schedule.css" %}'/>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
 {% endblock %}
-
 {% block body_contents %}
-<h1 style="margin-top: 25vh; text-align: center">To be Updated soon !!</h1><!--
- <div class="timeline-parcours">
-    <div class="container-info">
-       <div class="timeline-section-tl">
-          <div class="parcours-box parc1 parcours-active">
-             <div class="infobox date1">
-                <h3>DAY 0</h3>
 
-             </div>
-             <div class="fleche-bloc"></div>
-          </div>
-       </div>
-       <div class="timeline-section-tl">
-          <div class="parcours-box parc2">
-             <div class="infobox date2">
-                <h3>Day 1</h3>
+<div id="demo" class="carousel slide" data-ride="carousel">
 
-             </div>
-             <div class="fleche-bloc"></div>
-          </div>
-       </div>
-       <div class="timeline-section-tl">
-          <div class="parcours-box parc3">
-             <div class="infobox date3">
-                <h3>Day 2</h3>
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+  </ul>
 
-             </div>
-             <div class="fleche-bloc"></div>
-          </div>
-       </div>
-       <div class="timeline-section-tl">
-          <div class="parcours-box parc4">
-             <div class="infobox date4">
-                <h3>Day 3</h3>
-
-          </div>
-       </div>
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static "assets/images/Day-0.png"%}" alt="Los Angeles" width="1100" height="500">
     </div>
-
-    <div class="container-time-line">
-       <div class="time-line-parcours">
-          <div class="timeline-indicator">
-             <p class="indicator-val"></p>
-          </div>
-       </div>
+    <div class="carousel-item">
+      <img src="{% static "assets/images/Day-1.png"%}" alt="Chicago" width="1100" height="500">
     </div>
-    <div class="container-bulle">
-       <div class="timeline-section-tl">
-          <div class="tl-round round1"></div>
-       </div>
-       <div class="timeline-section-tl">
-          <div class="tl-round round2"></div>
-       </div>
-       <div class="timeline-section-tl">
-          <div class="tl-round round3"></div>
-       </div>
-       <div class="timeline-section-tl">
-          <div class="tl-round round4"></div>
-       </div>
+    <div class="carousel-item">
+      <img src="{% static "assets/images/Day-2.png"%}" alt="New York" width="1100" height="500">
     </div>
-
- </div>
-</div>
-<div class="contain">
-    <img src="{% static "/assets/images/24hr.png" %}" class="c1 card">
-    <img src="{% static "/assets/images/24hr.png" %}" class="c2 card">
-    <img src="{% static "/assets/images/24hr.png" %}" class="c3 card">
-    <img src="{% static "/assets/images/24hr.png" %}" class="c4 card">
+    <div class="carousel-item">
+      <img src="{% static "assets/images/Day-3.png"%}" alt="New York" width="1100" height="500">
+    </div>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
--->
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+
 {% endblock %}
 
 {% block extrajs %}
-<script src="{% static "js/schedule.js" %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 {% endblock %}

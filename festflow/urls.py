@@ -1,10 +1,17 @@
 from django.conf.urls import include, url
 from django.contrib.auth.views import logout
+from django.views.generic.base import RedirectView
 from . import views
 
 urlpatterns = [
+
+    url(r'^favicon.ico/$', RedirectView.as_view(url='/static/assets/images/avskr_logo.png')),
+
     # Index Page
     url(r'^$', views.index, name='index'),
+
+    # Home Page
+    url(r'^home/$', views.home, name='home'),
 
     # Team Page
     url(r'^teams/$', views.teams, name='teams'),
@@ -58,6 +65,9 @@ urlpatterns = [
 
     # social login urls
     url('', include('social_django.urls')),
+
+    #map
+    url(r'^map/$', views.map, name='map'),
 
     # Form to complete profile
     url(r'^complete_profile/$',
