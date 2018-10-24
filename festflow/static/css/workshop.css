@@ -22,31 +22,37 @@ body{
 
 .work-1{
   position:absolute;
-  top:5%;
+  top:2%;
   left:15%;
   width:70%;
-  height:27%;
-  z-index: 0;
-  cursor: pointer;
+  height:18%;
+  /* border:1px solid white;*/
 }
 .work-2{
   position:absolute;
-  top:37%;
+  top:27%;
   left:15%;
   width:70%;
-  height:27%;
-  z-index: 0;
-  cursor: pointer;
+  height:18%;
+  /* border:1px solid white;*/
 }
 .work-3{
   position:absolute;
-  top:69%;
+  top:52%;
   left:15%;
   width:70%;
-  height:27%;
-  z-index: 0;
-  cursor: pointer;
+  height:18%;
+  /* border:1px solid white; */
 }
+.work-4{
+  position:absolute;
+  top:77%;
+  left:15%;
+  width:70%;
+  height:18%;
+/*  border:1px solid white; */
+}
+
 
 .event-description {
      position: fixed;
@@ -174,28 +180,35 @@ body{
   }
   .work-1{
     position:absolute;
-    top:10%;
+    top:5%;
     left:1%;
     width:45%;
-    height:30%;
-
+    height:35%;
+    border:1px solid white;
   }
   .work-2{
     position:absolute;
-    top:10%;
-    left:49%;
+    top:50%;
+    left:1%;
     width:45%;
-    height:30%;
-
+    height:35%;
+    border:1px solid white;
   }
-
   .work-3{
     position:absolute;
-    top:50%;
-    left:27.5%;
+    top:5%;
+    left:49%;
     width:45%;
-    height:30%;
-
+    height:35%;
+    border:1px solid white;
+  }
+  .work-4{
+    position:absolute;
+    top:50%;
+    left:49%;
+    width:45%;
+    height:35%;
+    border:1px solid white;
   }
 
   .event-description {
