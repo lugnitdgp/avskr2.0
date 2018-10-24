@@ -22,34 +22,35 @@ body{
 
 .work-1{
   position:absolute;
-  top:2%;
+  top:4%;
   left:15%;
-  width:70%;
-  height:18%;
+  width:65%;
+  height:16%;
+  z-index:10;
   /* border:1px solid white;*/
 }
 .work-2{
   position:absolute;
-  top:27%;
+  top:29%;
   left:15%;
-  width:70%;
-  height:18%;
+  width:65%;
+  height:16%;
   /* border:1px solid white;*/
 }
 .work-3{
   position:absolute;
-  top:52%;
+  top:50%;
   left:15%;
-  width:70%;
-  height:18%;
+  width:65%;
+  height:16%;
   /* border:1px solid white; */
 }
 .work-4{
   position:absolute;
-  top:77%;
+  top:73%;
   left:15%;
-  width:70%;
-  height:18%;
+  width:65%;
+  height:16%;
 /*  border:1px solid white; */
 }
 
@@ -122,12 +123,7 @@ body{
  }
 
  .cross {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> lugnitdgp-master
      height: 20px;
      width: 20px;
      position: absolute;
@@ -135,10 +131,6 @@ body{
      right: 1%;
      z-index: 4;
      cursor: pointer;
-<<<<<<< HEAD
-=======
->>>>>>> 08b69a529c340de6107d3f0c56edd9e023ac408e
->>>>>>> lugnitdgp-master
      display: none;
  }
 

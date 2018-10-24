@@ -75,7 +75,23 @@ if($(window).width() < 600){
     if($(window).width() < 600)
       $('.work').css({'opacity': 0 ,'z-index':-1})
   });
+  $('.work-4').click(function(){
 
+    name=jQuery(this).attr('data-name');
+    logo=jQuery(this).attr('data-logo');
+    desc=jQuery(this).attr('data-desc');
+    venue=jQuery(this).attr('data-venue');
+    time=jQuery(this).attr('data-time');
+    $(".poster").attr("src", logo);
+    $(".event-name").html(name);
+    $(".description").html(desc);
+    $(".event_venue").html(venue);
+    $(".event_time").html(time);
+
+    $('.event-description').css({'opacity': 1, 'z-index':5 });
+    if($(window).width() < 600)
+      $('.work').css({'opacity': 0 ,'z-index':-1})
+  });
   $('.cross').click(function(){
     $('.event-description').css({'opacity': 0 ,'z-index':-1});
     $('.work').css({'opacity': 1 ,'z-index':0})
