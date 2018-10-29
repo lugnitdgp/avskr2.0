@@ -218,7 +218,7 @@ class Sponsor(models.Model):
 
     logo = models.ImageField(upload_to='sponsor_logos/')
 
-    url = models.URLField(max_length=200, default="#")
+    url = models.URLField(max_length=200, default="#" ,blank=True)
 
     pastorpresent = models.CharField(max_length=100, default="past", blank=True)
 
